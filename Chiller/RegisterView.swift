@@ -21,6 +21,7 @@ class RegisterView: UIViewController, NSURLSessionDelegate {
     @IBOutlet weak var username: UITextField!
     var session: NSURLSession!
     
+    @IBOutlet weak var registerBackground: UIView!
     @IBOutlet var tap: UITapGestureRecognizer!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,8 @@ class RegisterView: UIViewController, NSURLSessionDelegate {
         tap.numberOfTouchesRequired = 1;
         tap.numberOfTapsRequired = 1;
         view.addGestureRecognizer(tap)
+        registerBackground.layer.cornerRadius = 18
+        view.layer.contentsScale = 4.0
         
     }
     

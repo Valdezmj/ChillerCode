@@ -16,6 +16,8 @@ class LoginForm: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var username: UITextField!
 
+    @IBOutlet var tapTwo: UITapGestureRecognizer!
+    @IBOutlet weak var busyIndicator: UIActivityIndicatorView!
     @IBOutlet weak var signInBtn: UIButton!
     @IBOutlet var tap: UITapGestureRecognizer!
     override func viewDidLoad() {
@@ -27,11 +29,20 @@ class LoginForm: UIViewController {
         tap.numberOfTouchesRequired = 1;
         tap.numberOfTapsRequired = 1;
         view.addGestureRecognizer(tap)
+        
+        tapTwo = UITapGestureRecognizer(target: self, action: "dismissKeyboard:")
+        tapTwo.numberOfTouchesRequired = 1;
+        tapTwo.numberOfTapsRequired = 1;
+        view.addGestureRecognizer(tapTwo)
     }
     
 //    @IBAction func dismissKeyboard(sender: UITapGestureRecognizer) {
 //        
 //    }
+    @IBAction func dismissKeyboardTwo(sender: UITapGestureRecognizer) {
+        dismissKeyboard(tapTwo);
+        checkCredentials(signInBtn)
+    }
     func dismissKeyboard(sender: UITapGestureRecognizer) -> Void {
         password.resignFirstResponder()
         username.resignFirstResponder()
@@ -44,6 +55,7 @@ class LoginForm: UIViewController {
     
     @IBAction func checkCredentials(sender: UIButton!) {
         if username.text! != "" && password.text! != "" {
+            busyIndicator.startAnimating()
         let url : String = "http://baymaar.com/xj68123wqdgrego2/checkLoginCredentials.php";
         
         Alamofire.request(.POST, "\(url)" , parameters:["username" : "\(username.text!)", "password" : "\(password.text)"]).responseJSON() {
@@ -62,14 +74,14 @@ class LoginForm: UIViewController {
         if let responseString : String! = String(response["result"]!!) {
             print(responseString!)
             if responseString == "1" {
-                print("Account created successfully!\n")
+                busyIndicator.stopAnimating()
+                print("login success!\n")
                 let credentials = NSUserDefaults()
                 credentials.setObject(username.text!, forKey: "username")
-                
-                print("Stored username: \(credentials.objectForKey("username"))")
                 performSegueWithIdentifier("goHome", sender: self)
             } else {
-                print("Account creation failed!\n")
+                busyIndicator.stopAnimating()
+                print("Account not found!\n")
             }
         }
         
