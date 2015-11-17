@@ -11,17 +11,39 @@ import UIKit
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var Menu: UIBarButtonItem!
 
+    @IBOutlet weak var logoutBtn: UIBarButtonItem!
     var pickerData: [String] = [String]()
     @IBOutlet var cityPicker: UIPickerView!
+    @IBOutlet weak var greetingTag: UILabel!
+    let credentials = NSUserDefaults()
+
+    override func viewWillAppear(animated: Bool) {
+        if credentials.objectForKey("username") == nil {
+            performSegueWithIdentifier("load_login", sender: self)
+        }
+    }
+    
+    @IBAction func logout(sender: AnyObject) {
+        credentials.removeObjectForKey("username")
+        //credentials.removeObjectForKey("password")
+        performSegueWithIdentifier("load_login", sender: self)
+
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Test this print")
         // Do any additional setup after loading the view, typically from a nib.
         pickerData = ["Denver", "Cities to come.."]
 //        self.cityPicker.delegate = self
 //        self.cityPicker.dataSource = self
         Menu.target = self.revealViewController();
         Menu.action = Selector("revealToggle:");
+        let credentials = NSUserDefaults()
+        if credentials.objectForKey("username") != nil {
+            
+            greetingTag.text?.appendContentsOf( String(credentials.objectForKey("username")!))
+            print(greetingTag.text!)
+        }
     }
 
     override func didReceiveMemoryWarning() {

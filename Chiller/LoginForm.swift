@@ -19,22 +19,31 @@ class LoginForm: UIViewController {
     @IBOutlet weak var signInBtn: UIButton!
     @IBOutlet var tap: UITapGestureRecognizer!
     override func viewDidLoad() {
+
         super.viewDidLoad()
+        print("Hello\n")
         signInBackground.layer.cornerRadius = 12
         tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard:")
         tap.numberOfTouchesRequired = 1;
         tap.numberOfTapsRequired = 1;
         view.addGestureRecognizer(tap)
-        
     }
     
+//    @IBAction func dismissKeyboard(sender: UITapGestureRecognizer) {
+//        
+//    }
     func dismissKeyboard(sender: UITapGestureRecognizer) -> Void {
         password.resignFirstResponder()
         username.resignFirstResponder()
     }
     
-    @IBAction func goToHome(sender: UIButton) {
-        self.performSegueWithIdentifier("showHome", sender: self)
+    @IBAction func goToHome(sender: UIButton!) {
+        let credentials = NSUserDefaults()
+        credentials.setObject(username.text!, forKey: "username")
+        
+        print("Stored username: \(credentials.objectForKey("username"))")
+        performSegueWithIdentifier("goHome", sender: self)
+        performSegueWithIdentifier("goHome", sender: self)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -52,11 +61,16 @@ class LoginForm: UIViewController {
             }
         }
     }
+
     func handleResponse(response: AnyObject!) {
         if let responseString : String! = String(response["result"]!!) {
             print(responseString!)
             if responseString == "1" {
                 print("Account created successfully!\n")
+                let credentials = NSUserDefaults()
+                credentials.setObject(username.text!, forKey: "username")
+                
+                print("Stored username: \(credentials.objectForKey("username"))")
                 performSegueWithIdentifier("goHome", sender: self)
             } else {
                 print("Account creation failed!\n")

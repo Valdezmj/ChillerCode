@@ -22,7 +22,7 @@
                     </view>
                     <connections>
                         <segue destination="BEC-v4-3lv" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="2TT-c9-CX1"/>
-                        <segue destination="ed0-1M-VaO" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="UOS-Qo-LT7"/>
+                        <segue destination="5Pj-gT-der" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="PmT-gO-UBE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DiW-eZ-ABi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -121,10 +121,20 @@
                                         <barButtonItem key="rightBarButtonItem" title="Item" image="user.png" id="3g3-Ye-baK">
                                             <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="logout:" destination="5Pj-gT-der" id="3ks-ip-Zit"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hi, " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xf2-86-Ipz">
+                                <rect key="frame" x="367" y="26" width="188" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.161527055" green="0.51654155030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -149,7 +159,9 @@
                             <constraint firstItem="kNl-qI-D15" firstAttribute="leading" secondItem="ons-OJ-lph" secondAttribute="leadingMargin" id="hzb-9l-3jz"/>
                             <constraint firstItem="RLv-fS-NqB" firstAttribute="top" secondItem="2M1-je-yo0" secondAttribute="bottom" id="kve-0W-B5N"/>
                             <constraint firstAttribute="trailing" secondItem="2M1-je-yo0" secondAttribute="trailing" id="lJl-go-0do"/>
+                            <constraint firstAttribute="trailing" secondItem="Xf2-86-Ipz" secondAttribute="trailing" constant="45" id="lMD-kC-j0T"/>
                             <constraint firstItem="RLv-fS-NqB" firstAttribute="top" secondItem="kNl-qI-D15" secondAttribute="bottom" id="mCE-m2-zVH"/>
+                            <constraint firstItem="Xf2-86-Ipz" firstAttribute="top" secondItem="hnH-f3-Ljh" secondAttribute="bottom" constant="6" id="mdM-LX-HaO"/>
                             <constraint firstItem="gUo-QA-aJ4" firstAttribute="top" secondItem="RLv-fS-NqB" secondAttribute="bottom" constant="134" id="tD5-lo-EF6"/>
                             <constraint firstItem="2M1-je-yo0" firstAttribute="leading" secondItem="kNl-qI-D15" secondAttribute="trailing" constant="39" id="tMG-EU-aDn"/>
                             <constraint firstItem="2M1-je-yo0" firstAttribute="leading" secondItem="kNl-qI-D15" secondAttribute="trailing" constant="39" id="udd-kh-IPI"/>
@@ -158,6 +170,9 @@
                     <navigationItem key="navigationItem" title="Chiller" id="mzX-Va-EfC"/>
                     <connections>
                         <outlet property="Menu" destination="PRd-gK-S3c" id="clp-zL-lK0"/>
+                        <outlet property="greetingTag" destination="Xf2-86-Ipz" id="9xN-3Q-Y9Q"/>
+                        <outlet property="logoutBtn" destination="3g3-Ye-baK" id="Rav-9n-pFw"/>
+                        <segue destination="ed0-1M-VaO" kind="custom" identifier="load_login" customClass="SWRevealViewControllerSeguePushController" id="gVq-LY-Jzt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCF-Fw-pXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -341,7 +356,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToHome:" destination="ed0-1M-VaO" eventType="touchUpInside" id="HfV-Zn-8Rp"/>
+                                            <action selector="goToHome:" destination="ed0-1M-VaO" eventType="touchUpInside" id="H3v-J1-poW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -384,13 +399,17 @@
                         <outlet property="signInBtn" destination="Slv-7S-okl" id="0Vs-2g-hjz"/>
                         <outlet property="tap" destination="nnV-Mh-Q8O" id="19q-oj-HYb"/>
                         <outlet property="username" destination="Uau-Gs-LpG" id="v3K-5p-9Yj"/>
-                        <segue destination="5Pj-gT-der" kind="custom" identifier="showHome" customClass="SWRevealViewControllerSeguePushController" id="NX0-Tj-inQ"/>
+                        <segue destination="5Pj-gT-der" kind="custom" identifier="goHome" customClass="SWRevealViewControllerSeguePushController" id="La5-uv-m6S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Mi-EP-tjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="nnV-Mh-Q8O"/>
+                <tapGestureRecognizer id="nnV-Mh-Q8O">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="ed0-1M-VaO" id="cK1-ho-GtW"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1704" y="1872"/>
+            <point key="canvasLocation" x="1622" y="2088"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c0o-AB-RMZ">
@@ -566,7 +585,7 @@
         <image name="user.png" width="26" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NX0-Tj-inQ"/>
-        <segue reference="eTz-VG-kdu"/>
+        <segue reference="La5-uv-m6S"/>
+        <segue reference="gVq-LY-Jzt"/>
     </inferredMetricsTieBreakers>
 </document>
