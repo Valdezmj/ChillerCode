@@ -37,27 +37,23 @@ class LoginForm: UIViewController {
         username.resignFirstResponder()
     }
     
-    @IBAction func goToHome(sender: UIButton!) {
-        let credentials = NSUserDefaults()
-        credentials.setObject(username.text!, forKey: "username")
-        
-        print("Stored username: \(credentials.objectForKey("username"))")
-        performSegueWithIdentifier("goHome", sender: self)
-        performSegueWithIdentifier("goHome", sender: self)
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func createAccount(sender: UIButton!) {
-        let url : String = "http://baymaar.com/xj68123wqdgrego2/login.php";
+    @IBAction func checkCredentials(sender: UIButton!) {
+        if username.text! != "" && password.text! != "" {
+        let url : String = "http://baymaar.com/xj68123wqdgrego2/checkLoginCredentials.php";
         
         Alamofire.request(.POST, "\(url)" , parameters:["username" : "\(username.text!)", "password" : "\(password.text)"]).responseJSON() {
              (response) in
             if response.result.value != nil {
                 print("Sending to handle request!\n")
                 self.handleResponse(response.result.value!)
+            } else {
+                print("Couldn't get a response to check credentials: \(response)")
+            }
             }
         }
     }
@@ -74,8 +70,6 @@ class LoginForm: UIViewController {
                 performSegueWithIdentifier("goHome", sender: self)
             } else {
                 print("Account creation failed!\n")
-                print(responseString!)
-                
             }
         }
         

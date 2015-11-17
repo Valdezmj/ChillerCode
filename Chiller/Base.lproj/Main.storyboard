@@ -356,7 +356,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToHome:" destination="ed0-1M-VaO" eventType="touchUpInside" id="H3v-J1-poW"/>
+                                            <action selector="checkCredentials:" destination="ed0-1M-VaO" eventType="touchUpInside" id="kDV-Cs-Epf"/>
                                         </connections>
                                     </button>
                                 </subviews>
