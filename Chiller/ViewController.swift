@@ -15,6 +15,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet var cityPicker: UIPickerView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Test this print")
         // Do any additional setup after loading the view, typically from a nib.
         pickerData = ["Denver", "Cities to come.."]
 //        self.cityPicker.delegate = self
