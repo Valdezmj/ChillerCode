@@ -23,6 +23,8 @@
 		1AFD3A6A1BF7AC8900D5BEDD /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD3A691BF7AC8900D5BEDD /* LoginForm.swift */; };
 		1AFD3A831BFAD43E00D5BEDD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFD3A761BFAD36A00D5BEDD /* Alamofire.framework */; };
 		1AFD3A841BFAD43E00D5BEDD /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFD3A761BFAD36A00D5BEDD /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1AFD3A8A1BFB539D00D5BEDD /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD3A891BFB539C00D5BEDD /* RegisterView.swift */; };
+		1AFD3A921BFB681A00D5BEDD /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFD3A911BFB681A00D5BEDD /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +138,8 @@
 		1AEE2A151BE04FA200BD200F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1AFD3A691BF7AC8900D5BEDD /* LoginForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
 		1AFD3A6B1BFAD36A00D5BEDD /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
+		1AFD3A891BFB539C00D5BEDD /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		1AFD3A911BFB681A00D5BEDD /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AFD3A921BFB681A00D5BEDD /* JavaScriptCore.framework in Frameworks */,
 				1AEE2A161BE04FA200BD200F /* MapKit.framework in Frameworks */,
 				1AFD3A831BFAD43E00D5BEDD /* Alamofire.framework in Frameworks */,
 			);
@@ -175,6 +180,7 @@
 		1ACBDD571BDB745100A45E6E = {
 			isa = PBXGroup;
 			children = (
+				1AFD3A911BFB681A00D5BEDD /* JavaScriptCore.framework */,
 				1AFD3A6B1BFAD36A00D5BEDD /* Alamofire.xcodeproj */,
 				1AEE2A151BE04FA200BD200F /* MapKit.framework */,
 				1ACBDD621BDB745100A45E6E /* Chiller */,
@@ -212,6 +218,7 @@
 				1A1DC0B71BE8A7030095C815 /* BackTableVC.swift */,
 				1A6DC8791BEA983F00E899FE /* appIcon.assests.xcassets */,
 				1AFD3A691BF7AC8900D5BEDD /* LoginForm.swift */,
+				1AFD3A891BFB539C00D5BEDD /* RegisterView.swift */,
 			);
 			path = Chiller;
 			sourceTree = "<group>";
@@ -448,6 +455,7 @@
 				1AFD3A6A1BF7AC8900D5BEDD /* LoginForm.swift in Sources */,
 				1ACBDD661BDB745100A45E6E /* ViewController.swift in Sources */,
 				1ACBDD641BDB745100A45E6E /* AppDelegate.swift in Sources */,
+				1AFD3A8A1BFB539D00D5BEDD /* RegisterView.swift in Sources */,
 				1A1DC0B81BE8A7030095C815 /* BackTableVC.swift in Sources */,
 				1AE962E61BE898D9007D02CA /* SWRevealViewController.m in Sources */,
 			);

@@ -22,7 +22,7 @@
                     </view>
                     <connections>
                         <segue destination="BEC-v4-3lv" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="2TT-c9-CX1"/>
-                        <segue destination="j2L-Ve-1n3" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="t58-K4-zyr"/>
+                        <segue destination="ed0-1M-VaO" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="UOS-Qo-LT7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DiW-eZ-ABi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -204,10 +204,10 @@
             </objects>
             <point key="canvasLocation" x="1826.5" y="495.5"/>
         </scene>
-        <!--Login Form-->
+        <!--RegisterView-->
         <scene sceneID="QEF-Eg-bZc">
             <objects>
-                <viewController id="j2L-Ve-1n3" customClass="LoginForm" customModule="Chiller" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="RegisterView" id="j2L-Ve-1n3" customClass="RegisterView" customModule="Chiller" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gen-SR-2I7"/>
                         <viewControllerLayoutGuide type="bottom" id="TKF-d8-hmL"/>
@@ -216,11 +216,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1r-aR-LLV">
-                                <rect key="frame" x="231" y="122" width="159" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Account Registration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1r-aR-LLV">
+                                <rect key="frame" x="176" y="122" width="214" height="32"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name......" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Es-SP-Mhp">
@@ -254,23 +254,33 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9Q-tH-Bbx">
-                                <rect key="frame" x="240" y="482" width="114" height="40"/>
+                                <rect key="frame" x="240" y="464" width="114" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Sign up">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="createAccount:" destination="j2L-Ve-1n3" eventType="touchDown" id="Kel-iC-sDG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyX-5Z-nrd">
+                                <rect key="frame" x="45" y="502" width="491" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Already have an account? Sign in"/>
+                                <connections>
+                                    <segue destination="ed0-1M-VaO" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="eTz-VG-kdu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Y0o-nh-Vt0" firstAttribute="centerX" secondItem="ufk-H0-aOk" secondAttribute="centerX" id="0Me-hb-c9b"/>
+                            <constraint firstItem="UyX-5Z-nrd" firstAttribute="centerX" secondItem="ufk-H0-aOk" secondAttribute="centerX" id="1Zo-C7-xjc"/>
                             <constraint firstItem="A0q-NB-doC" firstAttribute="centerX" secondItem="ufk-H0-aOk" secondAttribute="centerX" id="9vT-56-Gvh"/>
                             <constraint firstItem="0Es-SP-Mhp" firstAttribute="centerX" secondItem="ufk-H0-aOk" secondAttribute="centerX" id="RDt-ab-4Qb"/>
                             <constraint firstItem="6ks-ua-3HY" firstAttribute="centerX" secondItem="ufk-H0-aOk" secondAttribute="centerX" id="agz-xr-2Me"/>
@@ -296,6 +306,91 @@
                 <tapGestureRecognizer id="t6Y-et-hZv"/>
             </objects>
             <point key="canvasLocation" x="1704" y="1029"/>
+        </scene>
+        <!--loginForm-->
+        <scene sceneID="Sl6-ti-aYc">
+            <objects>
+                <viewController title="loginForm" id="ed0-1M-VaO" customClass="LoginForm" customModule="Chiller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UJM-1W-FxT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gdd-gT-Uio"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RYf-Bv-JfV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.75" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c9X-eb-TH7">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uau-Gs-LpG">
+                                        <rect key="frame" x="28" y="17" width="184" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yKA-2B-KqO">
+                                        <rect key="frame" x="28" y="55" width="184" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slv-7S-okl">
+                                        <rect key="frame" x="91" y="100" width="59" height="20"/>
+                                        <animations/>
+                                        <state key="normal" title="Sign in">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goToHome:" destination="ed0-1M-VaO" eventType="touchUpInside" id="HfV-Zn-8Rp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.161527055" green="0.51654155030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="CHILLER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVp-a2-AQj">
+                                <rect key="frame" x="220" y="186" width="161" height="53"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWZ-9Q-nOh">
+                                <rect key="frame" x="64" y="371" width="472" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Don't have an account? Sign up"/>
+                                <connections>
+                                    <segue destination="j2L-Ve-1n3" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="syc-tM-R5x"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="nVp-a2-AQj" firstAttribute="centerX" secondItem="RYf-Bv-JfV" secondAttribute="centerX" id="4P0-sV-MCJ"/>
+                            <constraint firstItem="DWZ-9Q-nOh" firstAttribute="centerX" secondItem="RYf-Bv-JfV" secondAttribute="centerX" id="NOB-Em-G80"/>
+                            <constraint firstItem="DWZ-9Q-nOh" firstAttribute="top" secondItem="c9X-eb-TH7" secondAttribute="bottom" constant="7" id="TBi-Az-h0v"/>
+                            <constraint firstItem="c9X-eb-TH7" firstAttribute="centerY" secondItem="RYf-Bv-JfV" secondAttribute="centerY" id="lR7-Ge-lNd"/>
+                            <constraint firstItem="c9X-eb-TH7" firstAttribute="centerX" secondItem="RYf-Bv-JfV" secondAttribute="centerX" id="m0O-fs-AhI"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="nnV-Mh-Q8O" appends="YES" id="UzY-Tv-o7g"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="password" destination="yKA-2B-KqO" id="E8o-vt-89g"/>
+                        <outlet property="signInBackground" destination="c9X-eb-TH7" id="NuW-Ho-VUz"/>
+                        <outlet property="signInBtn" destination="Slv-7S-okl" id="0Vs-2g-hjz"/>
+                        <outlet property="tap" destination="nnV-Mh-Q8O" id="19q-oj-HYb"/>
+                        <outlet property="username" destination="Uau-Gs-LpG" id="v3K-5p-9Yj"/>
+                        <segue destination="5Pj-gT-der" kind="custom" identifier="showHome" customClass="SWRevealViewControllerSeguePushController" id="NX0-Tj-inQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Mi-EP-tjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="nnV-Mh-Q8O"/>
+            </objects>
+            <point key="canvasLocation" x="1704" y="1872"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c0o-AB-RMZ">
@@ -470,4 +565,8 @@
         <image name="more.png" width="32" height="32"/>
         <image name="user.png" width="26" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="NX0-Tj-inQ"/>
+        <segue reference="eTz-VG-kdu"/>
+    </inferredMetricsTieBreakers>
 </document>
