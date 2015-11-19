@@ -1,4 +1,6 @@
 <?php
+
+#TODO take care of SQL injection risk in the insert into the Users table
 $servername = "baymaar.com";
 $username = "marlie_admin";
 $password = "l0rdl0rd";
