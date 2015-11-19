@@ -24,7 +24,7 @@ class LoginForm: UIViewController {
 
         super.viewDidLoad()
         print("Hello\n")
-        signInBackground.layer.cornerRadius = 12
+        signInBackground.layer.cornerRadius = 10
         tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard:")
         tap.numberOfTouchesRequired = 1;
         tap.numberOfTapsRequired = 1;
@@ -34,6 +34,8 @@ class LoginForm: UIViewController {
         tapTwo.numberOfTouchesRequired = 1;
         tapTwo.numberOfTapsRequired = 1;
         view.addGestureRecognizer(tapTwo)
+        signInBackground.layer.borderColor = UIColor.blackColor().CGColor
+        signInBackground.layer.borderWidth = 1
     }
     
 //    @IBAction func dismissKeyboard(sender: UITapGestureRecognizer) {

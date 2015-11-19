@@ -12,6 +12,9 @@
 		1A6DC8721BEA878E00E899FE /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A6DC8701BEA878E00E899FE /* user.png */; };
 		1A6DC8741BEA93D500E899FE /* animal496.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A6DC8731BEA93D500E899FE /* animal496.png */; };
 		1A6DC87A1BEA983F00E899FE /* appIcon.assests.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A6DC8791BEA983F00E899FE /* appIcon.assests.xcassets */; };
+		1A8ED8631BFD9CF000C67120 /* FriendSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8ED8621BFD9CF000C67120 /* FriendSection.swift */; };
+		1A8ED8651BFD9ED800C67120 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8ED8641BFD9ED800C67120 /* PostTableViewCell.swift */; };
+		1A8ED86D1BFE4F4D00C67120 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8ED86C1BFE4F4D00C67120 /* Post.swift */; };
 		1ACBDD641BDB745100A45E6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACBDD631BDB745100A45E6E /* AppDelegate.swift */; };
 		1ACBDD661BDB745100A45E6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACBDD651BDB745100A45E6E /* ViewController.swift */; };
 		1ACBDD691BDB745100A45E6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ACBDD671BDB745100A45E6E /* Main.storyboard */; };
@@ -24,6 +27,7 @@
 		1AFD3A831BFAD43E00D5BEDD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFD3A761BFAD36A00D5BEDD /* Alamofire.framework */; };
 		1AFD3A841BFAD43E00D5BEDD /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFD3A761BFAD36A00D5BEDD /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1AFD3A8A1BFB539D00D5BEDD /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD3A891BFB539C00D5BEDD /* RegisterView.swift */; };
+		1AFD3AA81BFC318200D5BEDD /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFD3AA71BFC318200D5BEDD /* settings.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +123,9 @@
 		1A6DC8701BEA878E00E899FE /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		1A6DC8731BEA93D500E899FE /* animal496.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animal496.png; sourceTree = "<group>"; };
 		1A6DC8791BEA983F00E899FE /* appIcon.assests.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = appIcon.assests.xcassets; sourceTree = "<group>"; };
+		1A8ED8621BFD9CF000C67120 /* FriendSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSection.swift; sourceTree = "<group>"; };
+		1A8ED8641BFD9ED800C67120 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		1A8ED86C1BFE4F4D00C67120 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		1ACBDD601BDB745100A45E6E /* Chiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ACBDD631BDB745100A45E6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ACBDD651BDB745100A45E6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +145,7 @@
 		1AFD3A691BF7AC8900D5BEDD /* LoginForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
 		1AFD3A6B1BFAD36A00D5BEDD /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		1AFD3A891BFB539C00D5BEDD /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		1AFD3AA71BFC318200D5BEDD /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,20 +209,24 @@
 			children = (
 				1A6DC86C1BEA847E00E899FE /* Images */,
 				1AE962E41BE898D9007D02CA /* SWRevealViewController.h */,
+				1AFD3AA71BFC318200D5BEDD /* settings.png */,
 				1AE962E51BE898D9007D02CA /* SWRevealViewController.m */,
 				1ACBDD631BDB745100A45E6E /* AppDelegate.swift */,
 				1ACBDD651BDB745100A45E6E /* ViewController.swift */,
 				1ACBDD671BDB745100A45E6E /* Main.storyboard */,
+				1AE962E31BE898D8007D02CA /* Chiller-Bridging-Header.h */,
 				1A6DC8731BEA93D500E899FE /* animal496.png */,
 				1A6DC8701BEA878E00E899FE /* user.png */,
 				1A6DC86F1BEA878E00E899FE /* more.png */,
 				1ACBDD6C1BDB745100A45E6E /* LaunchScreen.storyboard */,
 				1ACBDD6F1BDB745100A45E6E /* Info.plist */,
-				1AE962E31BE898D8007D02CA /* Chiller-Bridging-Header.h */,
 				1A1DC0B71BE8A7030095C815 /* BackTableVC.swift */,
 				1A6DC8791BEA983F00E899FE /* appIcon.assests.xcassets */,
 				1AFD3A691BF7AC8900D5BEDD /* LoginForm.swift */,
 				1AFD3A891BFB539C00D5BEDD /* RegisterView.swift */,
+				1A8ED8621BFD9CF000C67120 /* FriendSection.swift */,
+				1A8ED8641BFD9ED800C67120 /* PostTableViewCell.swift */,
+				1A8ED86C1BFE4F4D00C67120 /* Post.swift */,
 			);
 			path = Chiller;
 			sourceTree = "<group>";
@@ -419,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ACBDD6E1BDB745100A45E6E /* LaunchScreen.storyboard in Resources */,
+				1AFD3AA81BFC318200D5BEDD /* settings.png in Resources */,
 				1A6DC8741BEA93D500E899FE /* animal496.png in Resources */,
 				1A6DC8711BEA878E00E899FE /* more.png in Resources */,
 				1A6DC8721BEA878E00E899FE /* user.png in Resources */,
@@ -448,10 +461,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A8ED8631BFD9CF000C67120 /* FriendSection.swift in Sources */,
 				1AFD3A6A1BF7AC8900D5BEDD /* LoginForm.swift in Sources */,
 				1ACBDD661BDB745100A45E6E /* ViewController.swift in Sources */,
+				1A8ED8651BFD9ED800C67120 /* PostTableViewCell.swift in Sources */,
 				1ACBDD641BDB745100A45E6E /* AppDelegate.swift in Sources */,
 				1AFD3A8A1BFB539D00D5BEDD /* RegisterView.swift in Sources */,
+				1A8ED86D1BFE4F4D00C67120 /* Post.swift in Sources */,
 				1A1DC0B81BE8A7030095C815 /* BackTableVC.swift in Sources */,
 				1AE962E61BE898D9007D02CA /* SWRevealViewController.m in Sources */,
 			);

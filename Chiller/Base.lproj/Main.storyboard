@@ -94,6 +94,14 @@
                                     <segue destination="Mg9-mz-sMo" kind="embed" id="d9g-Iy-Uls"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2M1-je-yo0">
+                                <rect key="frame" x="300" y="59" width="300" height="279"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="TQS-M8-SOn" kind="embed" id="FjA-UK-ZVH"/>
+                                </connections>
+                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RLv-fS-NqB">
                                 <rect key="frame" x="0.0" y="338" width="600" height="262"/>
                                 <animations/>
@@ -105,9 +113,9 @@
                                 <rect key="frame" x="0.0" y="15" width="600" height="44"/>
                                 <animations/>
                                 <items>
-                                    <navigationItem title="Chiller" id="spa-HH-f6E">
-                                        <barButtonItem key="leftBarButtonItem" image="more.png" id="PRd-gK-S3c">
-                                            <inset key="imageInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                                    <navigationItem id="spa-HH-f6E">
+                                        <barButtonItem key="leftBarButtonItem" image="settings.png" id="PRd-gK-S3c">
+                                            <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Item" image="user.png" id="3g3-Ye-baK">
@@ -120,21 +128,14 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hi, " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xf2-86-Ipz">
-                                <rect key="frame" x="367" y="26" width="188" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CHILLER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llM-Js-gDA">
+                                <rect key="frame" x="239" y="26" width="123" height="33"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="27"/>
                                 <color key="textColor" red="0.161527055" green="0.51654155030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2M1-je-yo0">
-                                <rect key="frame" x="300" y="59" width="300" height="279"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <segue destination="TQS-M8-SOn" kind="embed" id="FjA-UK-ZVH"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -147,6 +148,8 @@
                             <constraint firstItem="RLv-fS-NqB" firstAttribute="top" secondItem="kNl-qI-D15" secondAttribute="bottom" constant="8" id="509-UO-OhQ"/>
                             <constraint firstItem="tQ8-ca-WAS" firstAttribute="leading" secondItem="ons-OJ-lph" secondAttribute="leading" id="5ud-WR-e5I"/>
                             <constraint firstItem="RLv-fS-NqB" firstAttribute="leading" secondItem="ons-OJ-lph" secondAttribute="leading" constant="7" id="7jx-z1-ChV"/>
+                            <constraint firstItem="llM-Js-gDA" firstAttribute="centerX" secondItem="ons-OJ-lph" secondAttribute="centerX" id="Aja-Je-tcz"/>
+                            <constraint firstItem="llM-Js-gDA" firstAttribute="top" secondItem="hnH-f3-Ljh" secondAttribute="bottom" constant="7" id="CZ1-XP-k4U"/>
                             <constraint firstAttribute="trailing" secondItem="tQ8-ca-WAS" secondAttribute="trailing" id="EgN-Jc-zPM"/>
                             <constraint firstItem="2M1-je-yo0" firstAttribute="leading" secondItem="kNl-qI-D15" secondAttribute="trailing" id="GPX-Ju-FfH"/>
                             <constraint firstItem="2M1-je-yo0" firstAttribute="leading" secondItem="kNl-qI-D15" secondAttribute="trailing" constant="39" id="L3h-6x-bZb"/>
@@ -154,14 +157,11 @@
                             <constraint firstItem="RLv-fS-NqB" firstAttribute="leading" secondItem="ons-OJ-lph" secondAttribute="leading" id="Obe-sz-wKl"/>
                             <constraint firstItem="gUo-QA-aJ4" firstAttribute="top" secondItem="RLv-fS-NqB" secondAttribute="bottom" id="PtO-Vg-aWd"/>
                             <constraint firstItem="tQ8-ca-WAS" firstAttribute="centerX" secondItem="ons-OJ-lph" secondAttribute="centerX" id="Te1-dP-rYK"/>
-                            <constraint firstItem="Xf2-86-Ipz" firstAttribute="top" secondItem="hnH-f3-Ljh" secondAttribute="bottom" constant="6" id="Wex-jk-LB5"/>
                             <constraint firstItem="kNl-qI-D15" firstAttribute="leading" secondItem="ons-OJ-lph" secondAttribute="leading" id="XsX-V3-TWg"/>
-                            <constraint firstItem="2M1-je-yo0" firstAttribute="top" secondItem="Xf2-86-Ipz" secondAttribute="bottom" constant="12" id="Zsl-c0-QcP"/>
                             <constraint firstItem="tQ8-ca-WAS" firstAttribute="top" secondItem="ons-OJ-lph" secondAttribute="top" constant="15" id="aEl-q8-2dm"/>
                             <constraint firstItem="kNl-qI-D15" firstAttribute="leading" secondItem="ons-OJ-lph" secondAttribute="leadingMargin" id="hzb-9l-3jz"/>
                             <constraint firstItem="RLv-fS-NqB" firstAttribute="top" secondItem="2M1-je-yo0" secondAttribute="bottom" id="kve-0W-B5N"/>
                             <constraint firstAttribute="trailing" secondItem="2M1-je-yo0" secondAttribute="trailing" id="lJl-go-0do"/>
-                            <constraint firstAttribute="trailing" secondItem="Xf2-86-Ipz" secondAttribute="trailing" constant="45" id="lMD-kC-j0T"/>
                             <constraint firstItem="RLv-fS-NqB" firstAttribute="top" secondItem="kNl-qI-D15" secondAttribute="bottom" id="mCE-m2-zVH"/>
                             <constraint firstItem="gUo-QA-aJ4" firstAttribute="top" secondItem="RLv-fS-NqB" secondAttribute="bottom" constant="134" id="tD5-lo-EF6"/>
                             <constraint firstItem="2M1-je-yo0" firstAttribute="leading" secondItem="kNl-qI-D15" secondAttribute="trailing" constant="39" id="tMG-EU-aDn"/>
@@ -171,7 +171,6 @@
                     <navigationItem key="navigationItem" title="Chiller" id="mzX-Va-EfC"/>
                     <connections>
                         <outlet property="Menu" destination="PRd-gK-S3c" id="clp-zL-lK0"/>
-                        <outlet property="greetingTag" destination="Xf2-86-Ipz" id="9xN-3Q-Y9Q"/>
                         <outlet property="logoutBtn" destination="3g3-Ye-baK" id="Rav-9n-pFw"/>
                         <segue destination="ed0-1M-VaO" kind="custom" identifier="load_login" customClass="SWRevealViewControllerSeguePushController" id="gVq-LY-Jzt"/>
                     </connections>
@@ -193,8 +192,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyY-iH-7PC">
-                                <rect key="frame" x="123" y="0.0" width="46" height="30"/>
+                                <rect key="frame" x="123" y="0.0" width="74" height="30"/>
                                 <animations/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="21"/>
                                 <state key="normal" title="Bars">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -203,13 +203,15 @@
                                 <rect key="frame" x="260" y="242" width="33" height="37"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Wa-Mv-f5y">
                                 <rect key="frame" x="0.0" y="30" width="307" height="212"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.034244828409999997" green="0.69695677160000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.034244828409999997" green="0.69695677160000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LpK-W8-qll">
                                         <rect key="frame" x="0.0" y="28" width="307" height="55"/>
@@ -218,6 +220,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="307" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
+                                            <color key="backgroundColor" red="0.034244828409999997" green="0.69695677160000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
@@ -225,7 +228,7 @@
                             </tableView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.8540376229197808" green="0.87547397641090874" blue="0.9397830368842931" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.034244828409999997" green="0.69695677160000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="7Wa-Mv-f5y" firstAttribute="leading" secondItem="8yL-py-R5D" secondAttribute="leading" id="8B2-Ge-6h7"/>
                             <constraint firstAttribute="trailing" secondItem="7Wa-Mv-f5y" secondAttribute="trailing" id="S0U-b4-YoD"/>
@@ -238,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Lb-2B-yK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2123.5" y="168.5"/>
+            <point key="canvasLocation" x="2123" y="168.5"/>
         </scene>
         <!--RegisterView-->
         <scene sceneID="QEF-Eg-bZc">
@@ -255,66 +258,87 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PU2-2b-PKO">
                                 <rect key="frame" x="180" y="151" width="240" height="281"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1r-aR-LLV">
-                                        <rect key="frame" x="76" y="8" width="88" height="32"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1r-aR-LLV">
+                                        <rect key="frame" x="76" y="8" width="108" height="32"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name......" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Es-SP-Mhp">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Es-SP-Mhp">
                                         <rect key="frame" x="44" y="56" width="153" height="30"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name...." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LEW-hH-kdc">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LEW-hH-kdc">
                                         <rect key="frame" x="44" y="94" width="153" height="30"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y0o-nh-Vt0">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y0o-nh-Vt0">
                                         <rect key="frame" x="44" y="170" width="153" height="30"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ks-ua-3HY">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ks-ua-3HY">
                                         <rect key="frame" x="44" y="208" width="153" height="30"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9Q-tH-Bbx">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9Q-tH-Bbx">
                                         <rect key="frame" x="63" y="246" width="114" height="40"/>
                                         <animations/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Sign up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="createAccount:" destination="j2L-Ve-1n3" eventType="touchDown" id="Kel-iC-sDG"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A0q-NB-doC">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A0q-NB-doC">
                                         <rect key="frame" x="44" y="132" width="153" height="30"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.161527055" green="0.51654155030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="A0q-NB-doC" firstAttribute="centerX" secondItem="PU2-2b-PKO" secondAttribute="centerX" id="1vm-VI-bDf"/>
+                                    <constraint firstItem="LEW-hH-kdc" firstAttribute="centerX" secondItem="PU2-2b-PKO" secondAttribute="centerX" id="3rK-C9-AM6"/>
+                                    <constraint firstItem="6ks-ua-3HY" firstAttribute="centerX" secondItem="PU2-2b-PKO" secondAttribute="centerX" id="UNG-55-V3w"/>
+                                    <constraint firstItem="Y0o-nh-Vt0" firstAttribute="centerX" secondItem="PU2-2b-PKO" secondAttribute="centerX" id="XFd-yg-fUr"/>
+                                    <constraint firstItem="0Es-SP-Mhp" firstAttribute="centerX" secondItem="PU2-2b-PKO" secondAttribute="centerX" id="YMk-KJ-Ufj"/>
+                                    <constraint firstItem="v9Q-tH-Bbx" firstAttribute="centerX" secondItem="PU2-2b-PKO" secondAttribute="centerX" id="b1S-rm-9o8"/>
+                                    <constraint firstItem="L1r-aR-LLV" firstAttribute="centerX" secondItem="PU2-2b-PKO" secondAttribute="centerX" id="hkH-Ga-VXg"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyX-5Z-nrd">
                                 <rect key="frame" x="55" y="440" width="491" height="30"/>
                                 <animations/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
                                 <state key="normal" title="Already have an account? Sign in"/>
                                 <connections>
                                     <segue destination="ed0-1M-VaO" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="eTz-VG-kdu"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="CHILLER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWw-H1-x21">
+                                <rect key="frame" x="237" y="99" width="126" height="53"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -323,6 +347,8 @@
                         <constraints>
                             <constraint firstItem="UyX-5Z-nrd" firstAttribute="centerX" secondItem="ufk-H0-aOk" secondAttribute="centerX" id="1Zo-C7-xjc"/>
                             <constraint firstItem="PU2-2b-PKO" firstAttribute="centerY" secondItem="ufk-H0-aOk" secondAttribute="centerY" id="Eyt-Es-fHo"/>
+                            <constraint firstItem="cWw-H1-x21" firstAttribute="centerX" secondItem="ufk-H0-aOk" secondAttribute="centerX" id="Gp8-vV-exY"/>
+                            <constraint firstItem="UyX-5Z-nrd" firstAttribute="top" secondItem="cWw-H1-x21" secondAttribute="bottom" constant="288" id="J0U-3k-gb8"/>
                             <constraint firstItem="PU2-2b-PKO" firstAttribute="centerX" secondItem="ufk-H0-aOk" secondAttribute="centerX" id="YUB-8C-mgs"/>
                             <constraint firstItem="UyX-5Z-nrd" firstAttribute="top" secondItem="PU2-2b-PKO" secondAttribute="bottom" constant="1" id="sl1-70-qRf"/>
                         </constraints>
@@ -358,27 +384,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.94999999999999996" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c9X-eb-TH7">
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c9X-eb-TH7">
                                 <rect key="frame" x="180" y="236" width="240" height="128"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uau-Gs-LpG">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uau-Gs-LpG">
                                         <rect key="frame" x="28" y="17" width="184" height="30"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yKA-2B-KqO">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yKA-2B-KqO">
                                         <rect key="frame" x="28" y="55" width="184" height="30"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slv-7S-okl">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slv-7S-okl">
                                         <rect key="frame" x="91" y="100" width="59" height="20"/>
                                         <animations/>
                                         <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
                                         <state key="normal" title="Sign in">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="checkCredentials:" destination="ed0-1M-VaO" eventType="touchUpInside" id="kDV-Cs-Epf"/>
@@ -388,18 +416,28 @@
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.161527055" green="0.51654155030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Uau-Gs-LpG" firstAttribute="centerX" secondItem="c9X-eb-TH7" secondAttribute="centerX" id="0pq-LJ-R9B"/>
+                                    <constraint firstItem="yKA-2B-KqO" firstAttribute="centerX" secondItem="c9X-eb-TH7" secondAttribute="centerX" id="1X8-GH-U6t"/>
+                                    <constraint firstItem="Slv-7S-okl" firstAttribute="centerX" secondItem="c9X-eb-TH7" secondAttribute="centerX" id="Y4H-Sm-C5Q"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="CHILLER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVp-a2-AQj">
-                                <rect key="frame" x="246" y="184" width="108" height="53"/>
+                                <rect key="frame" x="246" y="184" width="126" height="53"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="26"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWZ-9Q-nOh">
                                 <rect key="frame" x="64" y="371" width="472" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Don't have an account? Sign up"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
+                                <state key="normal" title="Don't have an account? Sign up">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="j2L-Ve-1n3" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="syc-tM-R5x"/>
                                 </connections>
@@ -469,10 +507,10 @@
             </objects>
             <point key="canvasLocation" x="-70" y="1311"/>
         </scene>
-        <!--View Controller-->
+        <!--Friend Section-->
         <scene sceneID="xy2-88-vFg">
             <objects>
-                <viewController id="oEZ-F8-q3h" sceneMemberID="viewController">
+                <viewController id="oEZ-F8-q3h" customClass="FriendSection" customModule="Chiller" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R9f-OG-fjL"/>
                         <viewControllerLayoutGuide type="bottom" id="dn5-C5-ztp"/>
@@ -484,17 +522,89 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="What your friends are doing..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgR-Lp-FQa">
                                 <rect key="frame" x="0.0" y="5" width="469" height="21"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jHC-1o-xzG">
+                                <rect key="frame" x="0.0" y="43" width="600" height="219"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.85793616090000002" green="0.92899860860000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.85793616090000002" green="0.92899860860000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="90" id="bSA-0x-GpQ" customClass="PostTableViewCell" customModule="Chiller" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bSA-0x-GpQ" id="BBX-Zh-Jch">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Michael Valdez" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwn-jn-ioo">
+                                                    <rect key="frame" x="17" y="69" width="425" height="20"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Text me for details 7206358528" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVg-Sc-7VE">
+                                                    <rect key="frame" x="95" y="29" width="377" height="43"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Party at my house" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuP-Q6-vk5">
+                                                    <rect key="frame" x="95" y="8" width="452" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="user.png" translatesAutoresizingMaskIntoConstraints="NO" id="iEi-wa-E8L">
+                                                    <rect key="frame" x="17" y="8" width="67" height="40"/>
+                                                    <animations/>
+                                                    <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.85793616090000002" green="0.92899860860000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="iEi-wa-E8L" firstAttribute="leading" secondItem="BBX-Zh-Jch" secondAttribute="leading" constant="17" id="0RJ-zr-S2t"/>
+                                                <constraint firstItem="WuP-Q6-vk5" firstAttribute="leading" secondItem="iEi-wa-E8L" secondAttribute="trailing" constant="8" id="1Ex-RM-o8X"/>
+                                                <constraint firstItem="XVg-Sc-7VE" firstAttribute="top" secondItem="BBX-Zh-Jch" secondAttribute="top" constant="28" id="6eV-nT-w0k"/>
+                                                <constraint firstItem="iEi-wa-E8L" firstAttribute="top" secondItem="BBX-Zh-Jch" secondAttribute="top" constant="8" id="9DX-Kj-bqx"/>
+                                                <constraint firstAttribute="bottom" secondItem="iEi-wa-E8L" secondAttribute="bottom" constant="18" id="Ey0-Bx-YAR"/>
+                                                <constraint firstAttribute="bottom" secondItem="rwn-jn-ioo" secondAttribute="bottom" id="Kd3-Kc-QVZ"/>
+                                                <constraint firstItem="WuP-Q6-vk5" firstAttribute="top" secondItem="BBX-Zh-Jch" secondAttribute="top" constant="8" id="Rg2-ap-sQ2"/>
+                                                <constraint firstItem="rwn-jn-ioo" firstAttribute="leading" secondItem="BBX-Zh-Jch" secondAttribute="leading" constant="17" id="g2L-Gq-OuO"/>
+                                                <constraint firstItem="XVg-Sc-7VE" firstAttribute="leading" secondItem="iEi-wa-E8L" secondAttribute="trailing" constant="31" id="gwQ-AB-lLZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.85793616090000002" green="0.92899860860000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="avatar" destination="iEi-wa-E8L" id="vfc-5c-z8A"/>
+                                            <outlet property="postBody" destination="XVg-Sc-7VE" id="vVz-hY-qgl"/>
+                                            <outlet property="postTitle" destination="WuP-Q6-vk5" id="wee-4H-FZk"/>
+                                            <outlet property="postname" destination="rwn-jn-ioo" id="zyn-Yw-qyN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.85793616091125857" green="0.92899860861193895" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="VgR-Lp-FQa" firstAttribute="width" secondItem="Pmv-e2-6fL" secondAttribute="height" multiplier="229:128" id="iN5-76-TRN"/>
+                            <constraint firstAttribute="trailing" secondItem="jHC-1o-xzG" secondAttribute="trailing" id="ide-3g-wKz"/>
+                            <constraint firstItem="dn5-C5-ztp" firstAttribute="top" secondItem="jHC-1o-xzG" secondAttribute="bottom" id="mZa-M7-ySe"/>
+                            <constraint firstItem="jHC-1o-xzG" firstAttribute="leading" secondItem="Pmv-e2-6fL" secondAttribute="leading" id="sda-Yv-WpR"/>
+                            <constraint firstItem="jHC-1o-xzG" firstAttribute="top" secondItem="VgR-Lp-FQa" secondAttribute="bottom" constant="17" id="vzI-dZ-BXX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="postTable" destination="jHC-1o-xzG" id="tH6-o9-kzX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kp3-EH-nLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -572,8 +682,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwp-XX-aOr">
-                                <rect key="frame" x="130" y="0.0" width="46" height="30"/>
+                                <rect key="frame" x="130" y="0.0" width="56" height="30"/>
                                 <animations/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="21"/>
                                 <state key="normal" title="Food">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -582,7 +693,7 @@
                                 <rect key="frame" x="0.0" y="30" width="300" height="212"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="G5Z-wG-24A">
                                         <rect key="frame" x="0.0" y="28" width="300" height="55"/>
@@ -591,8 +702,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <color key="backgroundColor" red="0.034244828409999997" green="0.69695677160000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -600,11 +713,13 @@
                                 <rect key="frame" x="274" y="242" width="33" height="37"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.87876308900523559" green="0.87876308900523559" blue="0.87876308900523559" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xwp-XX-aOr" firstAttribute="centerX" secondItem="Tpk-qS-Xhq" secondAttribute="centerX" id="Man-fz-N7D"/>
                             <constraint firstItem="KAk-Jp-SDo" firstAttribute="top" secondItem="lgk-Pz-TW3" secondAttribute="bottom" id="Njz-gL-xzk"/>
@@ -617,11 +732,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qDA-z3-cfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1812.5" y="168.5"/>
+            <point key="canvasLocation" x="1812" y="168.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="more.png" width="32" height="32"/>
+        <image name="settings.png" width="28" height="32"/>
         <image name="user.png" width="26" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -14,7 +14,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var logoutBtn: UIBarButtonItem!
     var pickerData: [String] = [String]()
     @IBOutlet var cityPicker: UIPickerView!
-    @IBOutlet weak var greetingTag: UILabel!
     let credentials = NSUserDefaults()
 
     override func viewWillAppear(animated: Bool) {
@@ -41,8 +40,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         let credentials = NSUserDefaults()
         if credentials.objectForKey("username") != nil {
             
-            greetingTag.text?.appendContentsOf( String(credentials.objectForKey("username")!))
-            print(greetingTag.text!)
         }
     }
 

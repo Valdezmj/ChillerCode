@@ -32,7 +32,9 @@ class RegisterView: UIViewController, NSURLSessionDelegate {
         tap.numberOfTouchesRequired = 1;
         tap.numberOfTapsRequired = 1;
         view.addGestureRecognizer(tap)
-        registerBackground.layer.cornerRadius = 18
+        registerBackground.layer.cornerRadius = 10
+        registerBackground.layer.borderWidth = 1
+        registerBackground.layer.borderColor = UIColor.blackColor().CGColor
         view.layer.contentsScale = 4.0
         
     }
