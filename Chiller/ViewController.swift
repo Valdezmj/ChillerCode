@@ -9,9 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    @IBOutlet weak var signoutBtn: UIBarButtonItem!
     @IBOutlet weak var Menu: UIBarButtonItem!
 
-    @IBOutlet weak var logoutBtn: UIBarButtonItem!
+    @IBOutlet weak var goToProfileBtn: UIBarButtonItem!
     var pickerData: [String] = [String]()
     @IBOutlet var cityPicker: UIPickerView!
     let credentials = NSUserDefaults()
@@ -22,6 +23,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
     }
     
+    @IBAction func goToProfile(sender: UIBarButtonItem) {
+        performSegueWithIdentifier("toProfile", sender: self)
+    }
     @IBAction func logout(sender: AnyObject) {
         credentials.removeObjectForKey("username")
         //credentials.removeObjectForKey("password")

@@ -1,15 +1,15 @@
 //
-//  PostTableViewCell.swift
+//  RightCategoryCell.swift
 //  Chiller
 //
-//  Created by Michael Valdez on 11/18/15.
+//  Created by Michael Valdez on 11/19/15.
 //  Copyright © 2015 MK. All rights reserved.
 //
 
 import UIKit
 
-class PostTableViewCell: MGSwipeTableCell {
-
+class RightCategoryCell: MGSwipeTableCell {
+    
     @IBOutlet weak var postname: UILabel!
     @IBOutlet weak var postBody: UILabel!
     @IBOutlet weak var postTitle: UILabel!
@@ -19,11 +19,11 @@ class PostTableViewCell: MGSwipeTableCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }
