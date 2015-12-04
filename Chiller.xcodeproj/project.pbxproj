@@ -7,31 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A4172941C11689900417D6F /* CategoryPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4172841C11689900417D6F /* CategoryPost.swift */; };
-		1A4172951C11689900417D6F /* FriendSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4172851C11689900417D6F /* FriendSection.swift */; };
-		1A4172961C11689900417D6F /* LeftCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4172861C11689900417D6F /* LeftCategory.swift */; };
-		1A4172971C11689900417D6F /* LeftCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4172871C11689900417D6F /* LeftCategoryCell.swift */; };
-		1A4172981C11689900417D6F /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4172881C11689900417D6F /* LoginForm.swift */; };
-		1A4172991C11689900417D6F /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41728A1C11689900417D6F /* MGSwipeButton.m */; };
-		1A41729A1C11689900417D6F /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41728C1C11689900417D6F /* MGSwipeTableCell.m */; };
-		1A41729B1C11689900417D6F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41728D1C11689900417D6F /* Post.swift */; };
-		1A41729C1C11689900417D6F /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41728E1C11689900417D6F /* PostTableViewCell.swift */; };
-		1A41729D1C11689900417D6F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41728F1C11689900417D6F /* RegisterView.swift */; };
-		1A41729E1C11689900417D6F /* RightCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4172901C11689900417D6F /* RightCategory.swift */; };
-		1A41729F1C11689900417D6F /* RightCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4172911C11689900417D6F /* RightCategoryCell.swift */; };
-		1A4172A01C11689900417D6F /* ServerRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4172921C11689900417D6F /* ServerRequestFactory.swift */; };
-		1A4172A11C11689900417D6F /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A4172931C11689900417D6F /* settings.png */; };
-		1A4172A51C1168B900417D6F /* animal496.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A4172A21C1168B900417D6F /* animal496.png */; };
-		1A4172A61C1168B900417D6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4172A31C1168B900417D6F /* AppDelegate.swift */; };
-		1A4172A71C1168B900417D6F /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4172A41C1168B900417D6F /* BackTableVC.swift */; };
-		1A4172AC1C1168F400417D6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4172A81C1168F400417D6F /* LaunchScreen.storyboard */; };
-		1A4172AD1C1168F400417D6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4172AA1C1168F400417D6F /* Main.storyboard */; };
 		1A4172C61C1169A900417D6F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4172B91C1169A200417D6F /* Alamofire.framework */; };
 		1A4172C71C1169A900417D6F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4172B91C1169A200417D6F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1A4172CD1C116B6D00417D6F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4172CC1C116B6D00417D6F /* SWRevealViewController.m */; };
-		1A4172D01C116BD300417D6F /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A4172CE1C116BD300417D6F /* user.png */; };
-		1A4172D11C116BD300417D6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4172CF1C116BD300417D6F /* ViewController.swift */; };
 		1A4172D31C116D5900417D6F /* appIcon.assests.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A4172D21C116D5900417D6F /* appIcon.assests.xcassets */; };
+		1A7592871C117C2900F7BD3B /* animal496.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A75926E1C117C2900F7BD3B /* animal496.png */; };
+		1A7592881C117C2900F7BD3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A75926F1C117C2900F7BD3B /* AppDelegate.swift */; };
+		1A7592891C117C2900F7BD3B /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7592701C117C2900F7BD3B /* BackTableVC.swift */; };
+		1A75928A1C117C2900F7BD3B /* CategoryPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7592711C117C2900F7BD3B /* CategoryPost.swift */; };
+		1A75928B1C117C2900F7BD3B /* FriendSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7592731C117C2900F7BD3B /* FriendSection.swift */; };
+		1A75928C1C117C2900F7BD3B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A7592741C117C2900F7BD3B /* Info.plist */; };
+		1A75928D1C117C2900F7BD3B /* LeftCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7592751C117C2900F7BD3B /* LeftCategory.swift */; };
+		1A75928E1C117C2900F7BD3B /* LeftCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7592761C117C2900F7BD3B /* LeftCategoryCell.swift */; };
+		1A75928F1C117C2900F7BD3B /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7592771C117C2900F7BD3B /* LoginForm.swift */; };
+		1A7592901C117C2900F7BD3B /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7592791C117C2900F7BD3B /* MGSwipeButton.m */; };
+		1A7592911C117C2900F7BD3B /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A75927B1C117C2900F7BD3B /* MGSwipeTableCell.m */; };
+		1A7592921C117C2900F7BD3B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A75927C1C117C2900F7BD3B /* Post.swift */; };
+		1A7592931C117C2900F7BD3B /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A75927D1C117C2900F7BD3B /* PostTableViewCell.swift */; };
+		1A7592941C117C2900F7BD3B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A75927E1C117C2900F7BD3B /* RegisterView.swift */; };
+		1A7592951C117C2900F7BD3B /* RightCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A75927F1C117C2900F7BD3B /* RightCategory.swift */; };
+		1A7592961C117C2900F7BD3B /* RightCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7592801C117C2900F7BD3B /* RightCategoryCell.swift */; };
+		1A7592971C117C2900F7BD3B /* ServerRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7592811C117C2900F7BD3B /* ServerRequestFactory.swift */; };
+		1A7592981C117C2900F7BD3B /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A7592821C117C2900F7BD3B /* settings.png */; };
+		1A7592991C117C2900F7BD3B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7592841C117C2900F7BD3B /* SWRevealViewController.m */; };
+		1A75929A1C117C2900F7BD3B /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A7592851C117C2900F7BD3B /* user.png */; };
+		1A75929B1C117C2900F7BD3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7592861C117C2900F7BD3B /* ViewController.swift */; };
+		1A7592A01C117C7900F7BD3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A75929C1C117C7900F7BD3B /* LaunchScreen.storyboard */; };
+		1A7592A11C117C7900F7BD3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A75929E1C117C7900F7BD3B /* Main.storyboard */; };
 		1A9C89811C1167EB0040C9E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9C89801C1167EB0040C9E9 /* Assets.xcassets */; };
 		1A9C898F1C1167EB0040C9E9 /* ChillerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9C898E1C1167EB0040C9E9 /* ChillerTests.swift */; };
 		1A9C899A1C1167EB0040C9E9 /* ChillerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9C89991C1167EB0040C9E9 /* ChillerUITests.swift */; };
@@ -125,37 +126,37 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1A4172831C11684A00417D6F /* Chiller-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chiller-Bridging-Header.h"; sourceTree = "<group>"; };
-		1A4172841C11689900417D6F /* CategoryPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPost.swift; sourceTree = "<group>"; };
-		1A4172851C11689900417D6F /* FriendSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSection.swift; sourceTree = "<group>"; };
-		1A4172861C11689900417D6F /* LeftCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftCategory.swift; sourceTree = "<group>"; };
-		1A4172871C11689900417D6F /* LeftCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftCategoryCell.swift; sourceTree = "<group>"; };
-		1A4172881C11689900417D6F /* LoginForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
-		1A4172891C11689900417D6F /* MGSwipeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeButton.h; sourceTree = "<group>"; };
-		1A41728A1C11689900417D6F /* MGSwipeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeButton.m; sourceTree = "<group>"; };
-		1A41728B1C11689900417D6F /* MGSwipeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeTableCell.h; sourceTree = "<group>"; };
-		1A41728C1C11689900417D6F /* MGSwipeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeTableCell.m; sourceTree = "<group>"; };
-		1A41728D1C11689900417D6F /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		1A41728E1C11689900417D6F /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
-		1A41728F1C11689900417D6F /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		1A4172901C11689900417D6F /* RightCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightCategory.swift; sourceTree = "<group>"; };
-		1A4172911C11689900417D6F /* RightCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightCategoryCell.swift; sourceTree = "<group>"; };
-		1A4172921C11689900417D6F /* ServerRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerRequestFactory.swift; sourceTree = "<group>"; };
-		1A4172931C11689900417D6F /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
-		1A4172A21C1168B900417D6F /* animal496.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animal496.png; sourceTree = "<group>"; };
-		1A4172A31C1168B900417D6F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A4172A41C1168B900417D6F /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
-		1A4172A91C1168F400417D6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1A4172AB1C1168F400417D6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A4172AE1C1169A200417D6F /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
-		1A4172CB1C116B6C00417D6F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		1A4172CC1C116B6D00417D6F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		1A4172CE1C116BD300417D6F /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
-		1A4172CF1C116BD300417D6F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1A4172D21C116D5900417D6F /* appIcon.assests.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = appIcon.assests.xcassets; sourceTree = "<group>"; };
+		1A75926E1C117C2900F7BD3B /* animal496.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animal496.png; sourceTree = "<group>"; };
+		1A75926F1C117C2900F7BD3B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1A7592701C117C2900F7BD3B /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
+		1A7592711C117C2900F7BD3B /* CategoryPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPost.swift; sourceTree = "<group>"; };
+		1A7592721C117C2900F7BD3B /* Chiller-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Chiller-Bridging-Header.h"; sourceTree = "<group>"; };
+		1A7592731C117C2900F7BD3B /* FriendSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSection.swift; sourceTree = "<group>"; };
+		1A7592741C117C2900F7BD3B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A7592751C117C2900F7BD3B /* LeftCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftCategory.swift; sourceTree = "<group>"; };
+		1A7592761C117C2900F7BD3B /* LeftCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftCategoryCell.swift; sourceTree = "<group>"; };
+		1A7592771C117C2900F7BD3B /* LoginForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
+		1A7592781C117C2900F7BD3B /* MGSwipeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeButton.h; sourceTree = "<group>"; };
+		1A7592791C117C2900F7BD3B /* MGSwipeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeButton.m; sourceTree = "<group>"; };
+		1A75927A1C117C2900F7BD3B /* MGSwipeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeTableCell.h; sourceTree = "<group>"; };
+		1A75927B1C117C2900F7BD3B /* MGSwipeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeTableCell.m; sourceTree = "<group>"; };
+		1A75927C1C117C2900F7BD3B /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		1A75927D1C117C2900F7BD3B /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		1A75927E1C117C2900F7BD3B /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		1A75927F1C117C2900F7BD3B /* RightCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightCategory.swift; sourceTree = "<group>"; };
+		1A7592801C117C2900F7BD3B /* RightCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightCategoryCell.swift; sourceTree = "<group>"; };
+		1A7592811C117C2900F7BD3B /* ServerRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerRequestFactory.swift; sourceTree = "<group>"; };
+		1A7592821C117C2900F7BD3B /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		1A7592831C117C2900F7BD3B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		1A7592841C117C2900F7BD3B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		1A7592851C117C2900F7BD3B /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		1A7592861C117C2900F7BD3B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1A75929D1C117C7900F7BD3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1A75929F1C117C7900F7BD3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A9C89761C1167EB0040C9E9 /* Chiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9C89801C1167EB0040C9E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1A9C89851C1167EB0040C9E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A9C898A1C1167EB0040C9E9 /* ChillerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChillerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9C898E1C1167EB0040C9E9 /* ChillerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChillerTests.swift; sourceTree = "<group>"; };
 		1A9C89901C1167EB0040C9E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -228,35 +229,35 @@
 		1A9C89781C1167EB0040C9E9 /* Chiller */ = {
 			isa = PBXGroup;
 			children = (
+				1A75926E1C117C2900F7BD3B /* animal496.png */,
+				1A75926F1C117C2900F7BD3B /* AppDelegate.swift */,
+				1A7592701C117C2900F7BD3B /* BackTableVC.swift */,
+				1A7592711C117C2900F7BD3B /* CategoryPost.swift */,
+				1A7592721C117C2900F7BD3B /* Chiller-Bridging-Header.h */,
+				1A7592731C117C2900F7BD3B /* FriendSection.swift */,
+				1A7592741C117C2900F7BD3B /* Info.plist */,
+				1A75929C1C117C7900F7BD3B /* LaunchScreen.storyboard */,
+				1A75929E1C117C7900F7BD3B /* Main.storyboard */,
+				1A7592751C117C2900F7BD3B /* LeftCategory.swift */,
+				1A7592761C117C2900F7BD3B /* LeftCategoryCell.swift */,
+				1A7592771C117C2900F7BD3B /* LoginForm.swift */,
+				1A7592781C117C2900F7BD3B /* MGSwipeButton.h */,
+				1A7592791C117C2900F7BD3B /* MGSwipeButton.m */,
+				1A75927A1C117C2900F7BD3B /* MGSwipeTableCell.h */,
+				1A75927B1C117C2900F7BD3B /* MGSwipeTableCell.m */,
+				1A75927C1C117C2900F7BD3B /* Post.swift */,
+				1A75927D1C117C2900F7BD3B /* PostTableViewCell.swift */,
+				1A75927E1C117C2900F7BD3B /* RegisterView.swift */,
+				1A75927F1C117C2900F7BD3B /* RightCategory.swift */,
+				1A7592801C117C2900F7BD3B /* RightCategoryCell.swift */,
+				1A7592811C117C2900F7BD3B /* ServerRequestFactory.swift */,
+				1A7592821C117C2900F7BD3B /* settings.png */,
+				1A7592831C117C2900F7BD3B /* SWRevealViewController.h */,
+				1A7592841C117C2900F7BD3B /* SWRevealViewController.m */,
+				1A7592851C117C2900F7BD3B /* user.png */,
+				1A7592861C117C2900F7BD3B /* ViewController.swift */,
 				1A4172D21C116D5900417D6F /* appIcon.assests.xcassets */,
-				1A4172CE1C116BD300417D6F /* user.png */,
-				1A4172CF1C116BD300417D6F /* ViewController.swift */,
-				1A4172CB1C116B6C00417D6F /* SWRevealViewController.h */,
-				1A4172CC1C116B6D00417D6F /* SWRevealViewController.m */,
-				1A4172A81C1168F400417D6F /* LaunchScreen.storyboard */,
-				1A4172AA1C1168F400417D6F /* Main.storyboard */,
-				1A4172841C11689900417D6F /* CategoryPost.swift */,
-				1A4172851C11689900417D6F /* FriendSection.swift */,
-				1A4172A21C1168B900417D6F /* animal496.png */,
-				1A4172A31C1168B900417D6F /* AppDelegate.swift */,
-				1A4172A41C1168B900417D6F /* BackTableVC.swift */,
-				1A4172861C11689900417D6F /* LeftCategory.swift */,
-				1A4172871C11689900417D6F /* LeftCategoryCell.swift */,
-				1A4172881C11689900417D6F /* LoginForm.swift */,
-				1A4172891C11689900417D6F /* MGSwipeButton.h */,
-				1A41728A1C11689900417D6F /* MGSwipeButton.m */,
-				1A41728B1C11689900417D6F /* MGSwipeTableCell.h */,
-				1A41728C1C11689900417D6F /* MGSwipeTableCell.m */,
-				1A41728D1C11689900417D6F /* Post.swift */,
-				1A41728E1C11689900417D6F /* PostTableViewCell.swift */,
-				1A41728F1C11689900417D6F /* RegisterView.swift */,
-				1A4172901C11689900417D6F /* RightCategory.swift */,
-				1A4172911C11689900417D6F /* RightCategoryCell.swift */,
-				1A4172921C11689900417D6F /* ServerRequestFactory.swift */,
-				1A4172931C11689900417D6F /* settings.png */,
 				1A9C89801C1167EB0040C9E9 /* Assets.xcassets */,
-				1A9C89851C1167EB0040C9E9 /* Info.plist */,
-				1A4172831C11684A00417D6F /* Chiller-Bridging-Header.h */,
 			);
 			path = Chiller;
 			sourceTree = "<group>";
@@ -349,6 +350,7 @@
 				TargetAttributes = {
 					1A9C89751C1167EB0040C9E9 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = PJE8423Y86;
 					};
 					1A9C89891C1167EB0040C9E9 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -443,13 +445,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A4172A11C11689900417D6F /* settings.png in Resources */,
-				1A4172AD1C1168F400417D6F /* Main.storyboard in Resources */,
-				1A4172D01C116BD300417D6F /* user.png in Resources */,
-				1A4172AC1C1168F400417D6F /* LaunchScreen.storyboard in Resources */,
+				1A75928C1C117C2900F7BD3B /* Info.plist in Resources */,
+				1A7592981C117C2900F7BD3B /* settings.png in Resources */,
+				1A75929A1C117C2900F7BD3B /* user.png in Resources */,
+				1A7592A11C117C7900F7BD3B /* Main.storyboard in Resources */,
 				1A4172D31C116D5900417D6F /* appIcon.assests.xcassets in Resources */,
+				1A7592A01C117C7900F7BD3B /* LaunchScreen.storyboard in Resources */,
 				1A9C89811C1167EB0040C9E9 /* Assets.xcassets in Resources */,
-				1A4172A51C1168B900417D6F /* animal496.png in Resources */,
+				1A7592871C117C2900F7BD3B /* animal496.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,23 +477,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A41729E1C11689900417D6F /* RightCategory.swift in Sources */,
-				1A4172991C11689900417D6F /* MGSwipeButton.m in Sources */,
-				1A41729D1C11689900417D6F /* RegisterView.swift in Sources */,
-				1A4172981C11689900417D6F /* LoginForm.swift in Sources */,
-				1A4172A61C1168B900417D6F /* AppDelegate.swift in Sources */,
-				1A4172961C11689900417D6F /* LeftCategory.swift in Sources */,
-				1A41729B1C11689900417D6F /* Post.swift in Sources */,
-				1A41729A1C11689900417D6F /* MGSwipeTableCell.m in Sources */,
-				1A4172941C11689900417D6F /* CategoryPost.swift in Sources */,
-				1A4172D11C116BD300417D6F /* ViewController.swift in Sources */,
-				1A4172971C11689900417D6F /* LeftCategoryCell.swift in Sources */,
-				1A4172951C11689900417D6F /* FriendSection.swift in Sources */,
-				1A4172CD1C116B6D00417D6F /* SWRevealViewController.m in Sources */,
-				1A4172A71C1168B900417D6F /* BackTableVC.swift in Sources */,
-				1A41729F1C11689900417D6F /* RightCategoryCell.swift in Sources */,
-				1A4172A01C11689900417D6F /* ServerRequestFactory.swift in Sources */,
-				1A41729C1C11689900417D6F /* PostTableViewCell.swift in Sources */,
+				1A7592931C117C2900F7BD3B /* PostTableViewCell.swift in Sources */,
+				1A7592891C117C2900F7BD3B /* BackTableVC.swift in Sources */,
+				1A7592971C117C2900F7BD3B /* ServerRequestFactory.swift in Sources */,
+				1A75928A1C117C2900F7BD3B /* CategoryPost.swift in Sources */,
+				1A7592901C117C2900F7BD3B /* MGSwipeButton.m in Sources */,
+				1A75928D1C117C2900F7BD3B /* LeftCategory.swift in Sources */,
+				1A7592881C117C2900F7BD3B /* AppDelegate.swift in Sources */,
+				1A7592961C117C2900F7BD3B /* RightCategoryCell.swift in Sources */,
+				1A75928F1C117C2900F7BD3B /* LoginForm.swift in Sources */,
+				1A75929B1C117C2900F7BD3B /* ViewController.swift in Sources */,
+				1A75928E1C117C2900F7BD3B /* LeftCategoryCell.swift in Sources */,
+				1A7592911C117C2900F7BD3B /* MGSwipeTableCell.m in Sources */,
+				1A7592991C117C2900F7BD3B /* SWRevealViewController.m in Sources */,
+				1A7592941C117C2900F7BD3B /* RegisterView.swift in Sources */,
+				1A7592951C117C2900F7BD3B /* RightCategory.swift in Sources */,
+				1A75928B1C117C2900F7BD3B /* FriendSection.swift in Sources */,
+				1A7592921C117C2900F7BD3B /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,18 +534,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1A4172A81C1168F400417D6F /* LaunchScreen.storyboard */ = {
+		1A75929C1C117C7900F7BD3B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1A4172A91C1168F400417D6F /* Base */,
+				1A75929D1C117C7900F7BD3B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		1A4172AA1C1168F400417D6F /* Main.storyboard */ = {
+		1A75929E1C117C7900F7BD3B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1A4172AB1C1168F400417D6F /* Base */,
+				1A75929F1C117C7900F7BD3B /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -636,8 +639,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = Chiller/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Chiller/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MK.Chiller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -651,12 +655,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = Chiller/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Chiller/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MK.Chiller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Chiller/Chiller-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Release;
 		};
