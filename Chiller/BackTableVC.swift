@@ -8,21 +8,19 @@
 
 import Foundation
 
-class BackTableVC: UITableViewController {
-    var TableArray = [String]()
-    
+class BackTableVC: UIViewController {
+    let credentials = NSUserDefaults()
+
+    @IBAction func goToProfile(sender: AnyObject) {
+        performSegueWithIdentifier("load_profile", sender: self)
+
+    }
+    @IBAction func logout(sender: AnyObject) {
+        credentials.removeObjectForKey("username")
+        //credentials.removeObjectForKey("password")
+        performSegueWithIdentifier("load_login", sender: self)
+    }
     override func viewDidLoad() {
-        TableArray = ["IceBox"]
-    }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return TableArray.count
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = TableArray[indexPath.row];
-        return cell
     }
 }

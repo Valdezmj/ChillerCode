@@ -16,6 +16,7 @@ class LoginForm: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var username: UITextField!
 
+    @IBOutlet weak var errorText: UILabel!
     @IBOutlet var tapTwo: UITapGestureRecognizer!
     @IBOutlet weak var busyIndicator: UIActivityIndicatorView!
     @IBOutlet weak var signInBtn: UIButton!
@@ -23,7 +24,7 @@ class LoginForm: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
-        print("Hello\n")
+        errorText.hidden = true
         signInBackground.layer.cornerRadius = 10
         tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard:")
         tap.numberOfTouchesRequired = 1;
@@ -76,12 +77,14 @@ class LoginForm: UIViewController {
             print(responseString!)
             if responseString == "1" {
                 busyIndicator.stopAnimating()
+                errorText.hidden = true
                 print("login success!\n")
                 let credentials = NSUserDefaults()
                 credentials.setObject(username.text!, forKey: "username")
                 performSegueWithIdentifier("goHome", sender: self)
             } else {
                 busyIndicator.stopAnimating()
+                errorText.hidden = false
                 print("Account not found!\n")
             }
         }

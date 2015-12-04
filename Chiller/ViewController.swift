@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-    @IBOutlet weak var signoutBtn: UIBarButtonItem!
     @IBOutlet weak var Menu: UIBarButtonItem!
 
     @IBOutlet weak var goToProfileBtn: UIBarButtonItem!
@@ -25,13 +24,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBAction func goToProfile(sender: UIBarButtonItem) {
         performSegueWithIdentifier("toProfile", sender: self)
-    }
-    @IBAction func logout(sender: AnyObject) {
-        credentials.removeObjectForKey("username")
-        //credentials.removeObjectForKey("password")
-        performSegueWithIdentifier("load_login", sender: self)
-
-        
     }
     override func viewDidLoad() {
         super.viewDidLoad()

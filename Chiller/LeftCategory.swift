@@ -19,7 +19,7 @@ class LeftCategory : UIViewController, UITableViewDataSource, UITableViewDelegat
     }
     
     func loadPosters() {
-        let photo1 = UIImage(named: "user.png")
+        let photo1 = UIImage(named: "tracks")
         let personOne = Post(name: "Location Name", body: "Free pancakes only today!", title: "Offering free pancakes", image: photo1!)
         let personTwo = Post(name: "Location Name", body: "Free pancakes only today!", title: "Offering free pancakes", image: photo1!)
         let personThree = Post(name: "Location Name", body: "Free pancakes only today!", title: "Offering free pancakes", image: photo1!)

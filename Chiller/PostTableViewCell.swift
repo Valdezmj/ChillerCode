@@ -18,6 +18,9 @@ class PostTableViewCell: MGSwipeTableCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        avatar.layer.borderColor = UIColor.grayColor().CGColor
+        avatar.layer.borderWidth = 1
+        avatar.layer.cornerRadius = 31
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

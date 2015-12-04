@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aAi-15-WE8">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Reveal View Controller-->
@@ -118,20 +118,13 @@
                                             <inset key="imageInsets" minX="2" minY="2" maxX="2" maxY="2"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </barButtonItem>
-                                        <rightBarButtonItems>
-                                            <barButtonItem image="user" id="3g3-Ye-baK">
-                                                <inset key="imageInsets" minX="2" minY="2" maxX="4" maxY="2"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <connections>
-                                                    <action selector="goToProfile:" destination="5Pj-gT-der" id="zef-tE-RFx"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem title="Sign out" id="dQ6-im-mcf">
-                                                <connections>
-                                                    <action selector="logout:" destination="5Pj-gT-der" id="gC4-cR-yzz"/>
-                                                </connections>
-                                            </barButtonItem>
-                                        </rightBarButtonItems>
+                                        <barButtonItem key="rightBarButtonItem" image="user" id="3g3-Ye-baK">
+                                            <inset key="imageInsets" minX="2" minY="2" maxX="4" maxY="2"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="goToProfile:" destination="5Pj-gT-der" id="zef-tE-RFx"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -139,7 +132,7 @@
                                 <rect key="frame" x="239" y="26" width="123" height="33"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="27"/>
-                                <color key="textColor" red="0.161527055" green="0.51654155030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.28235294117647058" green="0.60784313725490191" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
@@ -179,7 +172,6 @@
                     <connections>
                         <outlet property="Menu" destination="PRd-gK-S3c" id="clp-zL-lK0"/>
                         <outlet property="goToProfileBtn" destination="3g3-Ye-baK" id="DiO-dT-KYT"/>
-                        <outlet property="signoutBtn" destination="dQ6-im-mcf" id="G8t-tw-q0l"/>
                         <segue destination="ed0-1M-VaO" kind="custom" identifier="load_login" customClass="SWRevealViewControllerSeguePushController" id="gVq-LY-Jzt"/>
                         <segue destination="zDx-84-Woh" kind="custom" identifier="toProfile" customClass="SWRevealViewControllerSeguePushController" id="Jo1-pF-3ee"/>
                     </connections>
@@ -216,12 +208,13 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Wa-Mv-f5y">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Wa-Mv-f5y">
                                 <rect key="frame" x="0.0" y="30" width="307" height="212"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.034244828409999997" green="0.69695677160000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.38823529411764707" green="0.792156862745098" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <color key="sectionIndexBackgroundColor" red="0.034244828409999997" green="0.69695677160000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.38823529411764707" green="0.792156862745098" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryRightCell" id="LpK-W8-qll" customClass="RightCategoryCell" customModule="Chiller" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="307" height="55"/>
@@ -230,7 +223,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="307" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="90EEF928-2553-4F53-AA88-D26EB7C4C86E" translatesAutoresizingMaskIntoConstraints="NO" id="9DY-mc-jhf">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tracks" translatesAutoresizingMaskIntoConstraints="NO" id="9DY-mc-jhf">
                                                     <rect key="frame" x="8" y="21" width="33" height="24"/>
                                                     <animations/>
                                                 </imageView>
@@ -257,7 +250,7 @@
                                                 </label>
                                             </subviews>
                                             <animations/>
-                                            <color key="backgroundColor" red="0.034244828409999997" green="0.69695677160000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.38823529411764707" green="0.792156862745098" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="KVM-ZZ-1Gj" secondAttribute="trailing" constant="10" id="EMd-8h-yBm"/>
                                                 <constraint firstItem="98h-OF-bXg" firstAttribute="leading" secondItem="Kpu-Z8-BY2" secondAttribute="leadingMargin" constant="52" id="H1P-yJ-QaA"/>
@@ -283,7 +276,7 @@
                             </tableView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.034244828409999997" green="0.69695677160000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.38823529411764707" green="0.792156862745098" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="7Wa-Mv-f5y" firstAttribute="leading" secondItem="8yL-py-R5D" secondAttribute="leading" id="8B2-Ge-6h7"/>
                             <constraint firstAttribute="trailing" secondItem="7Wa-Mv-f5y" secondAttribute="trailing" id="S0U-b4-YoD"/>
@@ -369,7 +362,7 @@
                                     </textField>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.161527055" green="0.51654155030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.28235294117647058" green="0.60784313725490191" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="A0q-NB-doC" firstAttribute="centerX" secondItem="PU2-2b-PKO" secondAttribute="centerX" id="1vm-VI-bDf"/>
                                     <constraint firstItem="LEW-hH-kdc" firstAttribute="centerX" secondItem="PU2-2b-PKO" secondAttribute="centerX" id="3rK-C9-AM6"/>
@@ -384,7 +377,9 @@
                                 <rect key="frame" x="55" y="440" width="491" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
-                                <state key="normal" title="Already have an account? Sign in"/>
+                                <state key="normal" title="Already have an account? Sign in">
+                                    <color key="titleColor" red="0.28235294117647058" green="0.60784313725490191" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="ed0-1M-VaO" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="eTz-VG-kdu"/>
                                 </connections>
@@ -393,7 +388,7 @@
                                 <rect key="frame" x="237" y="99" width="126" height="53"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="26"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.28235294117647058" green="0.60784313725490191" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
@@ -471,9 +466,15 @@
                                             <outletCollection property="gestureRecognizers" destination="5Ao-tS-Sei" appends="YES" id="uLI-U8-gLq"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username or password is incorrect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXI-Hx-fsf">
+                                        <rect key="frame" x="11" y="85" width="218" height="21"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="12"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.161527055" green="0.51654155030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.28235294117647058" green="0.60784313725490191" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Uau-Gs-LpG" firstAttribute="centerX" secondItem="c9X-eb-TH7" secondAttribute="centerX" id="0pq-LJ-R9B"/>
                                     <constraint firstItem="yKA-2B-KqO" firstAttribute="centerX" secondItem="c9X-eb-TH7" secondAttribute="centerX" id="1X8-GH-U6t"/>
@@ -484,7 +485,7 @@
                                 <rect key="frame" x="246" y="184" width="126" height="53"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="26"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.28235294117647058" green="0.60784313725490191" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
@@ -493,7 +494,7 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
                                 <state key="normal" title="Don't have an account? Sign up">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.28235294117647058" green="0.60784313725490191" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -525,6 +526,7 @@
                     </view>
                     <connections>
                         <outlet property="busyIndicator" destination="M6q-zS-QxB" id="hi3-l5-G2E"/>
+                        <outlet property="errorText" destination="aXI-Hx-fsf" id="OZN-oG-Oj2"/>
                         <outlet property="password" destination="yKA-2B-KqO" id="E8o-vt-89g"/>
                         <outlet property="signInBackground" destination="c9X-eb-TH7" id="NuW-Ho-VUz"/>
                         <outlet property="signInBtn" destination="Slv-7S-okl" id="0Vs-2g-hjz"/>
@@ -584,22 +586,23 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jHC-1o-xzG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jHC-1o-xzG">
                                 <rect key="frame" x="0.0" y="43" width="600" height="219"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.85793616090000002" green="0.92899860860000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.63137254901960782" green="0.83921568627450982" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <color key="sectionIndexBackgroundColor" red="0.85793616090000002" green="0.92899860860000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.63137254901960782" green="0.83921568627450982" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.0" green="0.16398899773254874" blue="0.3437084441489362" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="90" id="bSA-0x-GpQ" customClass="PostTableViewCell" customModule="Chiller" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bSA-0x-GpQ" id="BBX-Zh-Jch">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="name" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwn-jn-ioo">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="name" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwn-jn-ioo">
                                                     <rect key="frame" x="17" y="69" width="425" height="20"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
@@ -619,27 +622,31 @@
                                                     <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="user.png" translatesAutoresizingMaskIntoConstraints="NO" id="VWo-hO-93u">
-                                                    <rect key="frame" x="17" y="14" width="50" height="42"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mike" translatesAutoresizingMaskIntoConstraints="NO" id="VWo-hO-93u">
+                                                    <rect key="frame" x="17" y="8" width="59" height="59"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="59" id="CFx-DV-Y3g"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <animations/>
-                                            <color key="backgroundColor" red="0.85793616090000002" green="0.92899860860000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.63137254901960782" green="0.83921568627450982" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="XVg-Sc-7VE" secondAttribute="trailing" constant="14" id="4hY-VQ-K8I"/>
+                                                <constraint firstItem="VWo-hO-93u" firstAttribute="leading" secondItem="rwn-jn-ioo" secondAttribute="leading" id="93G-xv-Hoa"/>
                                                 <constraint firstItem="XVg-Sc-7VE" firstAttribute="leading" secondItem="BBX-Zh-Jch" secondAttribute="leadingMargin" constant="87" id="ARg-UT-SbC"/>
                                                 <constraint firstItem="XVg-Sc-7VE" firstAttribute="top" secondItem="WuP-Q6-vk5" secondAttribute="bottom" id="BPY-da-OjS"/>
                                                 <constraint firstAttribute="bottom" secondItem="XVg-Sc-7VE" secondAttribute="bottom" constant="17" id="FjU-Pz-Lej"/>
                                                 <constraint firstAttribute="trailing" secondItem="WuP-Q6-vk5" secondAttribute="trailing" constant="53" id="KGb-gd-U9O"/>
                                                 <constraint firstItem="WuP-Q6-vk5" firstAttribute="leading" secondItem="BBX-Zh-Jch" secondAttribute="leadingMargin" constant="87" id="NbM-c0-cKL"/>
+                                                <constraint firstItem="WuP-Q6-vk5" firstAttribute="leading" secondItem="VWo-hO-93u" secondAttribute="trailing" constant="19" id="Op6-GO-zd6"/>
                                                 <constraint firstItem="rwn-jn-ioo" firstAttribute="leading" secondItem="BBX-Zh-Jch" secondAttribute="leading" constant="17" id="aWv-qZ-s0E"/>
                                                 <constraint firstAttribute="bottom" secondItem="rwn-jn-ioo" secondAttribute="bottom" id="azC-3J-FtP"/>
-                                                <constraint firstItem="VWo-hO-93u" firstAttribute="top" secondItem="BBX-Zh-Jch" secondAttribute="top" constant="14" id="b9S-uR-wve"/>
-                                                <constraint firstItem="rwn-jn-ioo" firstAttribute="top" secondItem="VWo-hO-93u" secondAttribute="bottom" constant="13" id="dkJ-tx-e0a"/>
                                                 <constraint firstAttribute="topMargin" secondItem="WuP-Q6-vk5" secondAttribute="top" id="egB-NA-uE0"/>
+                                                <constraint firstItem="VWo-hO-93u" firstAttribute="top" secondItem="WuP-Q6-vk5" secondAttribute="top" id="guq-9e-dpi"/>
                                                 <constraint firstAttribute="trailing" secondItem="rwn-jn-ioo" secondAttribute="trailing" constant="158" id="msb-WC-9NJ"/>
-                                                <constraint firstItem="VWo-hO-93u" firstAttribute="leading" secondItem="BBX-Zh-Jch" secondAttribute="leading" constant="17" id="s1Z-e3-bdz"/>
+                                                <constraint firstItem="rwn-jn-ioo" firstAttribute="top" secondItem="VWo-hO-93u" secondAttribute="bottom" constant="2" id="yb1-kY-eUa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -655,7 +662,7 @@
                             </tableView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.85793616091125857" green="0.92899860861193895" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.63137254901960782" green="0.83921568627450982" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dn5-C5-ztp" firstAttribute="top" secondItem="jHC-1o-xzG" secondAttribute="bottom" id="nTf-jR-dmi"/>
                             <constraint firstAttribute="trailing" secondItem="jHC-1o-xzG" secondAttribute="trailing" id="tzA-YV-V8A"/>
@@ -684,7 +691,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="John Doe" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOb-bX-hj4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="John Doe" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOb-bX-hj4">
                                 <rect key="frame" x="188" y="266" width="224" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
@@ -741,9 +748,13 @@
                                     <segue destination="5Pj-gT-der" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="xpo-ZA-PVQ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="7Nr-Zr-w4e">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mike" translatesAutoresizingMaskIntoConstraints="NO" id="7Nr-Zr-w4e">
                                 <rect key="frame" x="248" y="158" width="100" height="100"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="IEQ-7o-1aS"/>
+                                    <constraint firstAttribute="height" constant="100" id="bWA-Zd-MYZ"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <animations/>
@@ -758,6 +769,7 @@
                             <constraint firstItem="WT7-1f-tbL" firstAttribute="centerX" secondItem="jXe-7G-Evj" secondAttribute="centerX" id="SFf-IT-T9q"/>
                             <constraint firstItem="QAQ-gv-Kq5" firstAttribute="centerX" secondItem="jXe-7G-Evj" secondAttribute="centerX" id="e3u-QJ-Yyf"/>
                             <constraint firstItem="4Qp-La-oAB" firstAttribute="top" secondItem="0oX-6a-qjj" secondAttribute="bottom" id="eFZ-b2-tVb"/>
+                            <constraint firstItem="7Nr-Zr-w4e" firstAttribute="top" secondItem="0oX-6a-qjj" secondAttribute="bottom" constant="138" id="kKf-i6-xPH"/>
                             <constraint firstItem="7qy-AF-jaa" firstAttribute="centerX" secondItem="jXe-7G-Evj" secondAttribute="centerX" id="nZv-gi-hOZ"/>
                             <constraint firstItem="7Nr-Zr-w4e" firstAttribute="centerX" secondItem="jXe-7G-Evj" secondAttribute="centerX" id="nr1-vK-iC4"/>
                         </constraints>
@@ -765,12 +777,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8r2-oA-rvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="762" y="1748"/>
+            <point key="canvasLocation" x="764" y="1744"/>
         </scene>
-        <!--View Controller-->
+        <!--Back TableVC-->
         <scene sceneID="9Wp-k4-pHq">
             <objects>
-                <viewController id="BEC-v4-3lv" sceneMemberID="viewController">
+                <viewController id="BEC-v4-3lv" customClass="BackTableVC" customModule="Chiller" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZOd-cu-2pf"/>
                         <viewControllerLayoutGuide type="bottom" id="YK0-9f-yhk"/>
@@ -778,9 +790,49 @@
                     <view key="view" contentMode="scaleToFill" id="Ber-cr-syJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buA-zi-UNs">
+                                <rect key="frame" x="20" y="42" width="129" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="FDr-zw-8Cl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                <state key="normal" title="My Profile">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToProfile:" destination="BEC-v4-3lv" eventType="touchUpInside" id="sOw-bL-Kfb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWn-Rb-HL6">
+                                <rect key="frame" x="20" y="80" width="106" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="jZJ-AK-NLN"/>
+                                    <constraint firstAttribute="width" constant="106" id="tPh-6y-bxx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout:" destination="BEC-v4-3lv" eventType="touchUpInside" id="MXC-6O-fFn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.28235294117647058" green="0.60784313725490191" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YK0-9f-yhk" firstAttribute="top" secondItem="LWn-Rb-HL6" secondAttribute="bottom" constant="498" id="I1h-l6-zPt"/>
+                            <constraint firstItem="LWn-Rb-HL6" firstAttribute="top" secondItem="buA-zi-UNs" secondAttribute="bottom" constant="16" id="IS7-TW-eRX"/>
+                            <constraint firstItem="LWn-Rb-HL6" firstAttribute="leading" secondItem="Ber-cr-syJ" secondAttribute="leadingMargin" id="RsH-oW-nYY"/>
+                            <constraint firstItem="LWn-Rb-HL6" firstAttribute="leading" secondItem="buA-zi-UNs" secondAttribute="leading" id="Zfh-KB-0E7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="view" destination="Ber-cr-syJ" id="FGM-Sa-vaW"/>
+                        <segue destination="ed0-1M-VaO" kind="custom" identifier="load_login" customClass="SWRevealViewControllerSeguePushController" id="SLF-LF-ac5"/>
+                        <segue destination="zDx-84-Woh" kind="custom" identifier="load_profile" customClass="SWRevealViewControllerSeguePushController" id="fbv-X0-k18"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uCu-mT-lmC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -833,12 +885,13 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vck-st-FP1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vck-st-FP1">
                                 <rect key="frame" x="0.0" y="30" width="300" height="212"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.60784313729999995" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.28235294117647058" green="0.60784313725490191" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryLeftCell" id="G5Z-wG-24A" customClass="LeftCategoryCell" customModule="Chiller" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="300" height="55"/>
@@ -847,7 +900,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="90EEF928-2553-4F53-AA88-D26EB7C4C86E" translatesAutoresizingMaskIntoConstraints="NO" id="d6w-ST-7eH">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tracks" translatesAutoresizingMaskIntoConstraints="NO" id="d6w-ST-7eH">
                                                     <rect key="frame" x="8" y="21" width="33" height="24"/>
                                                     <animations/>
                                                 </imageView>
@@ -874,7 +927,7 @@
                                                 </label>
                                             </subviews>
                                             <animations/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="0.28235294117647058" green="0.60784313725490191" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="DOo-Mz-gSo" firstAttribute="leading" secondItem="acq-fA-JOj" secondAttribute="leadingMargin" constant="52" id="69n-X7-MhQ"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Iyj-tn-nbq" secondAttribute="trailing" constant="3" id="6Au-XX-SS7"/>
@@ -911,7 +964,7 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.28235294117647058" green="0.60784313725490191" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="xwp-XX-aOr" firstAttribute="centerX" secondItem="Tpk-qS-Xhq" secondAttribute="centerX" id="Man-fz-N7D"/>
                             <constraint firstItem="KAk-Jp-SDo" firstAttribute="top" secondItem="lgk-Pz-TW3" secondAttribute="bottom" id="Njz-gL-xzk"/>
@@ -931,120 +984,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="90EEF928-2553-4F53-AA88-D26EB7C4C86E" width="26" height="32">
-            <mutableData key="keyedArchiveRepresentation">
-YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
-GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
-c1dOU0NvbG9ygAKADRIgwAAAgAOAC1h7MjYsIDMyfdIVChYYWk5TLm9iamVjdHOhF4AEgArSFQoaHaIb
-HIAFgAaACRAA0iAKISJfEBROU1RJRkZSZXByZXNlbnRhdGlvboAHgAhPERWeTU0AKgAADQgAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABCAAAAiAAAAKQAAADAAAAA
-wAAAAKQAAACHAAAAQQAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAA4AAACEAAAA7QAAANwAAACPAAAAbAAAAFAAAABRAAAAbAAAAI8AAADcAAAA
-7QAAAIMAAAANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABVAAAA
-6wAAALIAAAAxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyAAAAswAAAOoAAABTAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAgQAAAOoAAABEAAAAAAAAAAAAAAAAAAAA
-GAAAAGsAAACTAAAAlwAAAHUAAAAoAAAAAAAAAAAAAAAAAAAARgAAAOoAAACAAAAAAQAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAIEAAADXAAAAIQAAAAAAAAAAAAAAAAAAAGUAAAD3AAAA/wAAAP8AAAD/AAAA
-/wAAAP4AAACQAAAAAgAAAAAAAAAAAAAAIgAAANcAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABVAAAA
-6gAAACEAAAAAAAAAAAAAAAAAAABBAAAA/gAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAB1AAAA
-AAAAAAAAAAAAAAAAIgAAAOoAAABTAAAAAAAAAAAAAAAAAAAADgAAAOoAAABEAAAAAAAAAAAAAAAAAAAA
-AAAAALoAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAOsAAAAEAAAAAAAAAAAAAAAAAAAA
-RQAAAOkAAAANAAAAAAAAAAAAAACEAAAAsgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5AAAAP8AAAD/AAAA
-/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAACUAAAAAAAAAAAAAAAAAAAAAAAAAswAAAIIAAAAAAAAA
-BAAAAO0AAAAxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADqAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
-/wAAAP8AAAD/AAAAIgAAAAAAAAAAAAAAAAAAAAAAAAAyAAAA7AAAAAQAAABDAAAA2wAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAANcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAANAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAADaAAAAQAAAAIgAAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-yAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAJEAAACGAAAApgAAAGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADkAAAA/wAAAP8AAAD/AAAA
-/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAGgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbAAAAKQAAAC/AAAA
-UgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMgAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
-/wAAAPgAAAAHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABSAAAAvgAAAL8AAABRAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAfwAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAtAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAFAAAAC+AAAApQAAAGgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAA
-9QAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-aAAAAKQAAACHAAAAkgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC9AAAA/wAAAP8AAAD/AAAA
-/wAAAP8AAAD/AAAA7gAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACTAAAAhgAAAEEAAADYAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGYAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAACXAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANgAAAA/AAAABAAAAO0AAAA1AAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAMwAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAEcAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAA2AAAA6wAAAAMAAAAAAAAAgwAAAK4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAAB7AAAA
-/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAhwAAABYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK4AAACAAAAA
-AAAAAAAAAAAOAAAA6QAAAEsAAAAAAAAADQAAAGMAAAC6AAAA+wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
-/wAAAP8AAAD/AAAA/AAAALkAAABhAAAAEAAAAAAAAABMAAAA6AAAAAwAAAAAAAAAAAAAAAAAAABUAAAA
-6AAAAJ8AAAD0AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
-/wAAAP8AAAD4AAAAsAAAAOYAAABRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA/wAAAP8AAAD/AAAA
-/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
-fgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAACAAAAA/gAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
-/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/gAAAH4AAAABAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAABTAAAA6QAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA
-/wAAAP8AAAD/AAAA/wAAAOgAAABRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAANAAAAggAAAOwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAOwAAACBAAAA
-DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AwAAAEAAAACGAAAAowAAAL8AAAC/AAAAowAAAIYAAAA/AAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4BAAADAAAAAQAaAAABAQADAAAAAQAgAAABAgADAAAABAAADbYB
-AwADAAAAAQABAAABBgADAAAAAQACAAABEQAEAAAAAQAAAAgBEgADAAAAAQABAAABFQADAAAAAQAEAAAB
-FgADAAAAAQAgAAABFwAEAAAAAQAADQABHAADAAAAAQABAAABUgADAAAAAQABAAABUwADAAAABAAADb6H
-cwAHAAAH2AAADcYAAAAAAAgACAAIAAgAAQABAAEAAQAAB9hhcHBsAiAAAG1udHJSR0IgWFlaIAfZAAIA
-GQALABoAC2Fjc3BBUFBMAAAAAGFwcGwAAAAAAAAAAAAAAAAAAAAAAAD21gABAAAAANMtYXBwbAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC2Rlc2MAAAEIAAAAb2RzY20A
-AAF4AAAFnGNwcnQAAAcUAAAAOHd0cHQAAAdMAAAAFHJYWVoAAAdgAAAAFGdYWVoAAAd0AAAAFGJYWVoA
-AAeIAAAAFHJUUkMAAAecAAAADmNoYWQAAAesAAAALGJUUkMAAAecAAAADmdUUkMAAAecAAAADmRlc2MA
-AAAAAAAAFEdlbmVyaWMgUkdCIFByb2ZpbGUAAAAAAAAAAAAAABRHZW5lcmljIFJHQiBQcm9maWxlAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtbHVjAAAAAAAAAB8A
-AAAMc2tTSwAAACgAAAGEZGFESwAAAC4AAAGsY2FFUwAAACQAAAHadmlWTgAAACQAAAH+cHRCUgAAACYA
-AAIidWtVQQAAACoAAAJIZnJGVQAAACgAAAJyaHVIVQAAACgAAAKaemhUVwAAABYAAALCbmJOTwAAACYA
-AALYY3NDWgAAACIAAAL+aGVJTAAAAB4AAAMgaXRJVAAAACgAAAM+cm9STwAAACQAAANmZGVERQAAACwA
-AAOKa29LUgAAABYAAAO2c3ZTRQAAACYAAALYemhDTgAAABYAAAPMamFKUAAAABoAAAPiZWxHUgAAACIA
-AAP8cHRQTwAAACYAAAQebmxOTAAAACgAAAREZXNFUwAAACYAAAQedGhUSAAAACQAAARsdHJUUgAAACIA
-AASQZmlGSQAAACgAAASyaHJIUgAAACgAAATacGxQTAAAACwAAAUCcnVSVQAAACIAAAUuYXJFRwAAACYA
-AAVQZW5VUwAAACYAAAV2AFYBYQBlAG8AYgBlAGMAbgD9ACAAUgBHAEIAIABwAHIAbwBmAGkAbABHAGUA
-bgBlAHIAZQBsACAAUgBHAEIALQBiAGUAcwBrAHIAaQB2AGUAbABzAGUAUABlAHIAZgBpAGwAIABSAEcA
-QgAgAGcAZQBuAOgAcgBpAGMAQx6lAHUAIABoAOwAbgBoACAAUgBHAEIAIABDAGgAdQBuAGcAUABlAHIA
-ZgBpAGwAIABSAEcAQgAgAEcAZQBuAOkAcgBpAGMAbwQXBDAEMwQwBDsETAQ9BDgEOQAgBD8EQAQ+BEQE
-MAQ5BDsAIABSAEcAQgBQAHIAbwBmAGkAbAAgAGcA6QBuAOkAcgBpAHEAdQBlACAAUgBWAEIAwQBsAHQA
-YQBsAOEAbgBvAHMAIABSAEcAQgAgAHAAcgBvAGYAaQBskBp1KAAgAFIARwBCACCCcl9pY8+P8ABHAGUA
-bgBlAHIAaQBzAGsAIABSAEcAQgAtAHAAcgBvAGYAaQBsAE8AYgBlAGMAbgD9ACAAUgBHAEIAIABwAHIA
-bwBmAGkAbAXkBegF1QXkBdkF3AAgAFIARwBCACAF2wXcBdwF2QBQAHIAbwBmAGkAbABvACAAUgBHAEIA
-IABnAGUAbgBlAHIAaQBjAG8AUAByAG8AZgBpAGwAIABSAEcAQgAgAGcAZQBuAGUAcgBpAGMAQQBsAGwA
-ZwBlAG0AZQBpAG4AZQBzACAAUgBHAEIALQBQAHIAbwBmAGkAbMd8vBgAIABSAEcAQgAg1QS4XNMMx3xm
-bpAaACAAUgBHAEIAIGPPj/Blh072TgCCLAAgAFIARwBCACAw1zDtMNUwoTCkMOsDkwO1A70DuQO6A8wA
-IAPAA8EDvwPGA68DuwAgAFIARwBCAFAAZQByAGYAaQBsACAAUgBHAEIAIABnAGUAbgDpAHIAaQBjAG8A
-QQBsAGcAZQBtAGUAZQBuACAAUgBHAEIALQBwAHIAbwBmAGkAZQBsDkIOGw4jDkQOHw4lDkwAIABSAEcA
-QgAgDhcOMQ5IDicORA4bAEcAZQBuAGUAbAAgAFIARwBCACAAUAByAG8AZgBpAGwAaQBZAGwAZQBpAG4A
-ZQBuACAAUgBHAEIALQBwAHIAbwBmAGkAaQBsAGkARwBlAG4AZQByAGkBDQBrAGkAIABSAEcAQgAgAHAA
-cgBvAGYAaQBsAFUAbgBpAHcAZQByAHMAYQBsAG4AeQAgAHAAcgBvAGYAaQBsACAAUgBHAEIEHgQxBEkE
-OAQ5ACAEPwRABD4ERAQ4BDsETAAgAFIARwBCBkUGRAZBACAGKgY5BjEGSgZBACAAUgBHAEIAIAYnBkQG
-OQYnBkUARwBlAG4AZQByAGkAYwAgAFIARwBCACAAUAByAG8AZgBpAGwAZXRleHQAAAAAQ29weXJpZ2h0
-IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC4AWFlaIAAAAAAAAPNSAAEAAAABFs9Y
-WVogAAAAAAAAdE0AAD3uAAAD0FhZWiAAAAAAAABadQAArHMAABc0WFlaIAAAAAAAACgaAAAVnwAAuDZj
-dXJ2AAAAAAAAAAEBzQAAc2YzMgAAAAAAAQxCAAAF3v//8yYAAAeSAAD9kf//+6L///2jAAAD3AAAwGzS
-JSYnKFokY2xhc3NuYW1lWCRjbGFzc2VzXxAQTlNCaXRtYXBJbWFnZVJlcKMpKitfEBBOU0JpdG1hcElt
-YWdlUmVwWk5TSW1hZ2VSZXBYTlNPYmplY3TSJSYtLldOU0FycmF5oi0r0iUmMDFeTlNNdXRhYmxlQXJy
-YXmjMC0r0zM0CjU2N1dOU1doaXRlXE5TQ29sb3JTcGFjZUQwIDAAEAOADNIlJjk6V05TQ29sb3KiOSvS
-JSY8PVdOU0ltYWdlojwrXxAPTlNLZXllZEFyY2hpdmVy0UBBVHJvb3SAAQAIABEAGgAjAC0AMgA3AEYA
-TABXAF4AZQByAHkAgQCDAIUAigCMAI4AlwCcAKcAqQCrAK0AsgC1ALcAuQC7AL0AwgDZANsA3RZ/FoQW
-jxaYFqsWrxbCFs0W1hbbFuMW5hbrFvoW/hcFFw0XGhcfFyEXIxcoFzAXMxc4F0AXQxdVF1gXXQAAAAAA
-AAIBAAAAAAAAAEIAAAAAAAAAAAAAAAAAABdfA
-</mutableData>
-        </image>
-        <image name="avatar" width="50" height="50"/>
+        <image name="mike" width="1356" height="1356"/>
         <image name="settings" width="32" height="32"/>
+        <image name="tracks" width="126" height="84"/>
         <image name="user" width="32" height="32"/>
-        <image name="user.png" width="26" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PmT-gO-UBE"/>
         <segue reference="eTz-VG-kdu"/>
+        <segue reference="La5-uv-m6S"/>
+        <segue reference="Jo1-pF-3ee"/>
     </inferredMetricsTieBreakers>
 </document>

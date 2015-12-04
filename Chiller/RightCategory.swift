@@ -19,7 +19,7 @@ class RightCategory : UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var rightTableView: UITableView!
     
     func loadPosters() {
-        let photo1 = UIImage(named:"user.png")
+        let photo1 = UIImage(named:"tracks")
         let personOne = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1)
         let personTwo = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1)
         let personThree = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1)

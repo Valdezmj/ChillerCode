@@ -22,7 +22,7 @@ class FriendSection : UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func loadPosters() {
-        let photo1 = UIImage(named: "user.png")
+        let photo1 = UIImage(named: "mike")
         let personOne = Post(name: "Michael Valdez", body: "2499 S. Colorado Blvd.\n put in 904 at the door and I'll let you up.", title: "Party at my house", image: photo1)
         let personTwo = Post(name: "Karlie Hanson", body: "just watching game of thrones with bay", title: "Netflix and chill", image: photo1)
         let personThree = Post(name: "Kyle Daniels", body: "text me if you're going", title: "Going to tracks tonight", image: photo1)
