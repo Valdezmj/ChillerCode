@@ -13,7 +13,6 @@ class CategoryPost: UITableViewCell {
     @IBOutlet weak var postname: UILabel!
     @IBOutlet weak var postBody: UILabel!
     @IBOutlet weak var postTitle: UILabel!
-    @IBOutlet weak var avatar: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -23,12 +23,12 @@ class FriendSection : UIViewController, UITableViewDataSource, UITableViewDelega
     
     func loadPosters() {
         let photo1 = UIImage(named: "user.png")
-        let personOne = Post(name: "Michael Valdez", body: "2499 S. Colorado Blvd.\n put in 904 at the door and I'll let you up.", title: "Party at my house", image: photo1!)
-        let personTwo = Post(name: "Karlie Hanson", body: "just watching game of thrones with bay", title: "Netflix and chill", image: photo1!)
-        let personThree = Post(name: "Kyle Daniels", body: "text me if you're going", title: "Going to tracks tonight", image: photo1!)
-        let personFour = Post(name: "Thirsty Bridge", body: "only come if you looking to get deez nuts", title: "Fuck at my place", image: photo1!)
-        let personFive = Post(name: "Austin Muck", body: "I will be your casanova", title: "Make love all night long in my bed", image: photo1!)
-        let personSix = Post(name: "Ryan Sanchez", body: "I am a marine so I can beat you and your daddy's ass", title: "Beat down in my tent", image: photo1!)
+        let personOne = Post(name: "Michael Valdez", body: "2499 S. Colorado Blvd.\n put in 904 at the door and I'll let you up.", title: "Party at my house", image: photo1)
+        let personTwo = Post(name: "Karlie Hanson", body: "just watching game of thrones with bay", title: "Netflix and chill", image: photo1)
+        let personThree = Post(name: "Kyle Daniels", body: "text me if you're going", title: "Going to tracks tonight", image: photo1)
+        let personFour = Post(name: "Thirsty Bridge", body: "only come if you looking to get deez nuts", title: "Fuck at my place", image: photo1)
+        let personFive = Post(name: "Austin Muck", body: "I will be your casanova", title: "Make love all night long in my bed", image: photo1)
+        let personSix = Post(name: "Ryan Sanchez", body: "I am a marine so I can beat you and your daddy's ass", title: "Beat down in my tent", image: photo1)
         
         posts += [personOne, personTwo, personThree, personFour, personFive, personSix]
         
@@ -60,7 +60,6 @@ class FriendSection : UIViewController, UITableViewDataSource, UITableViewDelega
         cell.postBody.text = _post.body
         cell.postTitle.text = _post.title
         cell.avatar.image = _post.img
-        
         
         return cell
     }

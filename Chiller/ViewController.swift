@@ -45,6 +45,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if credentials.objectForKey("username") != nil {
             
         }
+        
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
 
     override func didReceiveMemoryWarning() {

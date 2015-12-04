@@ -15,7 +15,7 @@ class Post {
     var body: String!
     var img: UIImage!
     
-    init(name: String!, body: String? = nil, title: String!,  image: UIImage) {
+    init(name: String!, body: String? = nil, title: String!,  image: UIImage!) {
         self.name = name
         self.title = title
         self.body = body

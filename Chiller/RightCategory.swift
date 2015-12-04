@@ -10,7 +10,7 @@ import Foundation
 import WebKit
 
 class RightCategory : UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var posts = [Post]()
+    var posts = Array<Post>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,15 +19,20 @@ class RightCategory : UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var rightTableView: UITableView!
     
     func loadPosters() {
-        let photo1 = UIImage(named: "user.png")
-        let personOne = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1!)
-        let personTwo = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1!)
-        let personThree = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1!)
-        let personFour = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1!)
-        let personFive = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1!)
+        let photo1 = UIImage(named:"user.png")
+        let personOne = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1)
+        let personTwo = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1)
+        let personThree = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1)
+        let personFour = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1)
+        let personFive = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1)
         let personSix = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1!)
         
-        posts += [personOne, personTwo, personThree, personFour, personFive, personSix]
+        posts.append(personOne)
+        posts.append(personTwo)
+        posts.append(personThree)
+        posts.append(personFour)
+        posts.append(personFive)
+        posts.append(personSix)
         
     }
     
@@ -42,12 +47,12 @@ class RightCategory : UIViewController, UITableViewDataSource, UITableViewDelega
         {
             cell = RightCategoryCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: reuseIdentifier)
         }
-        cell.leftButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor()), MGSwipeButton(title: "More",backgroundColor: UIColor.lightGrayColor())]
-        cell.leftSwipeSettings.transition = MGSwipeTransition.ClipCenter
-        
-        cell.rightButtons = [MGSwipeButton(title: "Chill", icon: UIImage(named:"chill.png"), backgroundColor: UIColor.blueColor())
-        ]
+        cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor()), MGSwipeButton(title: "More",backgroundColor: UIColor.lightGrayColor())]
         cell.rightSwipeSettings.transition = MGSwipeTransition.ClipCenter
+        
+        cell.leftButtons = [MGSwipeButton(title: "Chill", icon: UIImage(named:"chill.png"), backgroundColor: UIColor.blueColor())
+        ]
+        cell.leftSwipeSettings.transition = MGSwipeTransition.ClipCenter
         
         let _post = posts[indexPath.row]
         

@@ -135,11 +135,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chiller/ViewController.swift"
-            timestampString = "469674621.689342"
+            timestampString = "470424850.84657"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -183,13 +183,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chiller/PostTableViewCell.swift"
-            timestampString = "469651495.036538"
+            timestampString = "470428812.473376"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "awakeFromNib()"
-            landmarkType = "5">
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "PostTableViewCell"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

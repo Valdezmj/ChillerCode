@@ -42,12 +42,12 @@ class LeftCategory : UIViewController, UITableViewDataSource, UITableViewDelegat
         {
             cell = LeftCategoryCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: reuseIdentifier)
         }
-        cell.leftButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor()), MGSwipeButton(title: "More",backgroundColor: UIColor.lightGrayColor())]
-        cell.leftSwipeSettings.transition = MGSwipeTransition.ClipCenter
-        
-        cell.rightButtons = [MGSwipeButton(title: "Chill", icon: UIImage(named:"chill.png"), backgroundColor: UIColor.blueColor())
-            ]
+        cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor()), MGSwipeButton(title: "More",backgroundColor: UIColor.lightGrayColor())]
         cell.rightSwipeSettings.transition = MGSwipeTransition.ClipCenter
+        
+        cell.leftButtons = [MGSwipeButton(title: "Chill", icon: UIImage(named:"chill.png"), backgroundColor: UIColor.blueColor())
+            ]
+        cell.leftSwipeSettings.transition = MGSwipeTransition.ClipCenter
         
         let _post = posts[indexPath.row]
         
@@ -56,7 +56,6 @@ class LeftCategory : UIViewController, UITableViewDataSource, UITableViewDelegat
         cell.postBody.text = _post.body
         cell.postTitle.text = _post.title
         cell.avatar.image = _post.img
-        
         
         return cell
     }
