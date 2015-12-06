@@ -59,7 +59,7 @@ class LoginForm: UIViewController {
     @IBAction func checkCredentials(sender: UIButton!) {
         if username.text! != "" && password.text! != "" {
             busyIndicator.startAnimating()
-            let url : String = "http://baymaar.com/xj68123wqdgrego2/checkLoginCredentials.php";
+            let url : String = "http://baymaar.com/xj68123wqdgrego2/testCheckLoginCredentials.php";
             Alamofire.request(.POST, "\(url)" , parameters:["username" : "\(username.text!)", "password" : "\(password.text)"]).responseJSON() {
                 (response) in
                 if response.result.value != nil {

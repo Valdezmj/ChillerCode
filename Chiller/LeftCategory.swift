@@ -8,9 +8,11 @@
 
 import Foundation
 import WebKit
+import AlamofireImage
 
 class LeftCategory : UIViewController, UITableViewDataSource, UITableViewDelegate {
     var posts = [Post]()
+    let credentials = NSUserDefaults()
 
     @IBOutlet weak var leftTableView: UITableView!
     override func viewDidLoad() {
@@ -55,7 +57,12 @@ class LeftCategory : UIViewController, UITableViewDataSource, UITableViewDelegat
         cell.postname.text = _post.name
         cell.postBody.text = _post.body
         cell.postTitle.text = _post.title
-        cell.avatar.image = _post.img
+        //cell.avatar.image = _post.img
+        let url = NSURL(string: "http://baymaar.com/profile_pic/beta/profile.png")!
+        let blankImage = UIImage()
+        let filter = RoundedCornersFilter(radius: 15.0)
+        cell.avatar.af_setImageWithURL(url, placeholderImage: blankImage, filter: filter, imageTransition: UIImageView.ImageTransition.CrossDissolve(1))
+
         
         return cell
     }
