@@ -17,6 +17,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     let credentials = NSUserDefaults()
 
     override func viewWillAppear(animated: Bool) {
+        print("Checking if user is already logged in")
         if credentials.objectForKey("username") == nil {
             performSegueWithIdentifier("load_login", sender: self)
         }
@@ -37,7 +38,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if credentials.objectForKey("username") != nil {
             
         }
-        
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
 

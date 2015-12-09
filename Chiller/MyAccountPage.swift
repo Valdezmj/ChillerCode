@@ -44,8 +44,10 @@ class MyAccountPage : UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
     {
         print("image picked!")
-        let img = info[UIImagePickerControllerOriginalImage] as? UIImage
+        var img = info[UIImagePickerControllerOriginalImage] as? UIImage
         avatar.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        avatar.image = img?.af_imageRoundedIntoCircle()
+        img = fixImageOrientation(img!)
         let imageData = UIImagePNGRepresentation(img!)
         
         let base64String = imageData!.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
@@ -61,5 +63,60 @@ class MyAccountPage : UIViewController, UIImagePickerControllerDelegate, UINavig
             self.uploadingPicture.stopAnimating()
         }
         self.dismissViewControllerAnimated(true, completion: nil);
+    }
+    func fixImageOrientation(src:UIImage)->UIImage {
+        
+        if src.imageOrientation == UIImageOrientation.Up {
+            return src
+        }
+        
+        var transform: CGAffineTransform = CGAffineTransformIdentity
+        
+        switch src.imageOrientation {
+        case UIImageOrientation.Down, UIImageOrientation.DownMirrored:
+            transform = CGAffineTransformTranslate(transform, src.size.width, src.size.height)
+            transform = CGAffineTransformRotate(transform, CGFloat(M_PI))
+            break
+        case UIImageOrientation.Left, UIImageOrientation.LeftMirrored:
+            transform = CGAffineTransformTranslate(transform, src.size.width, 0)
+            transform = CGAffineTransformRotate(transform, CGFloat(M_PI_2))
+            break
+        case UIImageOrientation.Right, UIImageOrientation.RightMirrored:
+            transform = CGAffineTransformTranslate(transform, 0, src.size.height)
+            transform = CGAffineTransformRotate(transform, CGFloat(-M_PI_2))
+            break
+        case UIImageOrientation.Up, UIImageOrientation.UpMirrored:
+            break
+        }
+        
+        switch src.imageOrientation {
+        case UIImageOrientation.UpMirrored, UIImageOrientation.DownMirrored:
+            CGAffineTransformTranslate(transform, src.size.width, 0)
+            CGAffineTransformScale(transform, -1, 1)
+            break
+        case UIImageOrientation.LeftMirrored, UIImageOrientation.RightMirrored:
+            CGAffineTransformTranslate(transform, src.size.height, 0)
+            CGAffineTransformScale(transform, -1, 1)
+        case UIImageOrientation.Up, UIImageOrientation.Down, UIImageOrientation.Left, UIImageOrientation.Right:
+            break
+        }
+        
+        let ctx:CGContextRef = CGBitmapContextCreate(nil, Int(src.size.width), Int(src.size.height), CGImageGetBitsPerComponent(src.CGImage), 0, CGImageGetColorSpace(src.CGImage), CGImageAlphaInfo.PremultipliedLast.rawValue)!
+        
+        CGContextConcatCTM(ctx, transform)
+        
+        switch src.imageOrientation {
+        case UIImageOrientation.Left, UIImageOrientation.LeftMirrored, UIImageOrientation.Right, UIImageOrientation.RightMirrored:
+            CGContextDrawImage(ctx, CGRectMake(0, 0, src.size.height, src.size.width), src.CGImage)
+            break
+        default:
+            CGContextDrawImage(ctx, CGRectMake(0, 0, src.size.width, src.size.height), src.CGImage)
+            break
+        }
+        
+        let cgimg:CGImageRef = CGBitmapContextCreateImage(ctx)!
+        let img:UIImage = UIImage(CGImage: cgimg)
+        
+        return img
     }
 }

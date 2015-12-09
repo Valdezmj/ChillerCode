@@ -60,7 +60,8 @@ class LoginForm: UIViewController {
         if username.text! != "" && password.text! != "" {
             busyIndicator.startAnimating()
             let url : String = "http://baymaar.com/xj68123wqdgrego2/testCheckLoginCredentials.php";
-            Alamofire.request(.POST, "\(url)" , parameters:["username" : "\(username.text!)", "password" : "\(password.text)"]).responseJSON() {
+            print("\(self.username.text?.lowercaseString)")
+            Alamofire.request(.POST, "\(url)" , parameters:["username" : "\((username.text?.lowercaseString)!)", "password" : "\(password.text)"]).responseJSON() {
                 (response) in
                 if response.result.value != nil {
                     print("Sending to handle request!\n")
@@ -78,9 +79,9 @@ class LoginForm: UIViewController {
             if responseString == "1" {
                 busyIndicator.stopAnimating()
                 errorText.hidden = true
-                print("login success!\n")
+                print("login success! Hello\(username.text?.lowercaseString)")
                 let credentials = NSUserDefaults()
-                credentials.setObject(username.text!, forKey: "username")
+                credentials.setObject((username.text?.lowercaseString)!, forKey: "username")
                 performSegueWithIdentifier("goHome", sender: self)
             } else {
                 busyIndicator.stopAnimating()

@@ -20,12 +20,12 @@ class RightCategory : UIViewController, UITableViewDataSource, UITableViewDelega
     
     func loadPosters() {
         let photo1 = UIImage(named:"tracks")
-        let personOne = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1)
-        let personTwo = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1)
-        let personThree = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1)
-        let personFour = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1)
-        let personFive = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1)
-        let personSix = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1!)
+        let personOne = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1, chill: false, burn: false)
+        let personTwo = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1, chill: false, burn: false)
+        let personThree = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1, chill: false, burn: false)
+        let personFour = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1, chill: false, burn: false)
+        let personFive = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1, chill: false, burn: false)
+        let personSix = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1!, chill: false, burn: false)
         
         posts.append(personOne)
         posts.append(personTwo)

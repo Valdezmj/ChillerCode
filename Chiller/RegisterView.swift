@@ -90,11 +90,12 @@ class RegisterView: UIViewController, NSURLSessionDelegate {
     @IBAction func createAccount(sender: UIButton!) {
         let url : String = "http://baymaar.com/xj68123wqdgrego2/testCreateAccount.php";
         
-        Alamofire.request(.POST, "\(url)" , parameters:["username" : "\(username.text!)", "birth" :
-            "\(birthdate!)", "profile" : "http://baymaar.com/profile_pic/\(username.text!)/profile.png", "email" : "\(email.text!)", "firstname" : "\(firstName.text!)", "lastname" : "\(lastName.text!)", "password" : "\(password.text)", "active"  : "1"]).responseJSON() {
+        Alamofire.request(.POST, "\(url)" , parameters:["username" : "\((username.text?.lowercaseString)!)", "birth" :
+            "\(birthdate!)", "profile" : "http://baymaar.com/profile_pic/\((username.text?.lowercaseString)!)/profile.png", "email" : "\(email.text!)", "firstname" : "\(firstName.text!)", "lastname" : "\(lastName.text!)", "password" : "\(password.text)", "active"  : "1"]).responseJSON() {
             (response) in
             if response.result.value != nil {
                 print("Sending to handle request!\n")
+                print("\((self.username.text?.lowercaseString)!)")
                 self.handleResponse(response.result.value!)
             }
         }
@@ -104,6 +105,7 @@ class RegisterView: UIViewController, NSURLSessionDelegate {
             print(responseString!)
             if responseString == "1" {
                 print("Account created successfully!\n")
+                self.performSegueWithIdentifier("go_login", sender: self)
             } else {
                 print("Account creation failed!\n")
                 print(responseString!)                
