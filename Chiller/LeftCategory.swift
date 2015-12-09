@@ -44,12 +44,10 @@ class LeftCategory : UIViewController, UITableViewDataSource, UITableViewDelegat
         {
             cell = LeftCategoryCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: reuseIdentifier)
         }
-        cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor())]
-        cell.rightSwipeSettings.transition = MGSwipeTransition.ClipCenter
         
         cell.leftButtons = [MGSwipeButton(title: "Chill", icon: UIImage(named:"chill.png"), backgroundColor: UIColor.blueColor())
             ]
-        cell.leftSwipeSettings.transition = MGSwipeTransition.ClipCenter
+        cell.leftSwipeSettings.transition = MGSwipeTransition.Rotate3D
         
         let _post = posts[indexPath.row]
         
