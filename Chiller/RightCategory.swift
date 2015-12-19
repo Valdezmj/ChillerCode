@@ -23,17 +23,10 @@ class RightCategory : UIViewController, UITableViewDataSource, UITableViewDelega
         let personOne = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1, chill: false, burn: false)
         let personTwo = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1, chill: false, burn: false)
         let personThree = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1, chill: false, burn: false)
-        let personFour = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1, chill: false, burn: false)
-        let personFive = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1, chill: false, burn: false)
-        let personSix = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1!, chill: false, burn: false)
         
         posts.append(personOne)
         posts.append(personTwo)
         posts.append(personThree)
-        posts.append(personFour)
-        posts.append(personFive)
-        posts.append(personSix)
-        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

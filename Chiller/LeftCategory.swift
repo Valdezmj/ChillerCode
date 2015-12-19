@@ -24,12 +24,8 @@ class LeftCategory : UIViewController, UITableViewDataSource, UITableViewDelegat
         let photo1 = UIImage(named: "tracks")
         let personOne = Post(name: "Location Name", body: "Free pancakes only today!", title: "Offering free pancakes", image: photo1!, chill: false, burn: false)
         let personTwo = Post(name: "Location Name", body: "Free pancakes only today!", title: "Offering free pancakes", image: photo1!, chill: false, burn: false)
-        let personThree = Post(name: "Location Name", body: "Free pancakes only today!", title: "Offering free pancakes", image: photo1!, chill: false, burn: false)
-        let personFour = Post(name: "Location Name", body: "Free pancakes only today!", title: "Offering free pancakes", image: photo1!, chill: false, burn: false)
-        let personFive = Post(name: "Location Name", body: "Free pancakes only today!", title: "Offering free pancakes", image: photo1!, chill: false, burn: false)
-        let personSix = Post(name: "Location Name", body: "Free pancakes only today!", title: "Offering free pancakes", image: photo1!, chill: false, burn: false)
         
-        posts += [personOne, personTwo, personThree, personFour, personFive, personSix]
+        posts += [personOne, personTwo]
         
     }
     

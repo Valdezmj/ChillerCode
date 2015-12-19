@@ -60,36 +60,40 @@ class LoginForm: UIViewController {
         if username.text! != "" && password.text! != "" {
             busyIndicator.startAnimating()
             let url : String = "http://baymaar.com/xj68123wqdgrego2/testCheckLoginCredentials.php";
-            print("\(self.username.text?.lowercaseString)")
             Alamofire.request(.POST, "\(url)" , parameters:["username" : "\((username.text?.lowercaseString)!)", "password" : "\(password.text)"]).responseJSON() {
                 (response) in
-                if response.result.value != nil {
+                if response.data != nil {
                     print("Sending to handle request!\n")
-                    self.handleResponse(response.result.value!)
+                    self.handleResponse(response.data)
                 } else {
-                    print("Couldn't get a response to check credentials: \(response)")
+                    print("Couldn't get a response to check credentials: \(response.data)")
                 }
             }
         }
     }
 
-    func handleResponse(response: AnyObject!) {
-        if let responseString : String! = String(response["result"]!!) {
-            print(responseString!)
-            if responseString == "1" {
-                busyIndicator.stopAnimating()
-                errorText.hidden = true
-                print("login success! Hello\(username.text?.lowercaseString)")
-                let credentials = NSUserDefaults()
-                credentials.setObject((username.text?.lowercaseString)!, forKey: "username")
-                performSegueWithIdentifier("goHome", sender: self)
+    func handleResponse(response: NSData!) {
+        let _r = JSON(data: response)
+        print ("here: \(_r)")
+        if _r["result"] == "1" {
+            busyIndicator.stopAnimating()
+            errorText.hidden = true
+            let credentials = NSUserDefaults()
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "dd-MM-y"
+            let age = dateFormatter.dateFromString(_r["age"].stringValue)!
+            let date_a = NSDate()
+            let fixedAge = date_a.yearsFrom(age)
+            
+            credentials.setObject(fixedAge, forKey: "age")
+            credentials.setObject((username.text?.lowercaseString)!, forKey: "username")
+            credentials.setObject(_r["name"].stringValue, forKey: "name")
+            performSegueWithIdentifier("goHome", sender: self)
             } else {
                 busyIndicator.stopAnimating()
                 errorText.hidden = false
                 print("Account not found!\n")
             }
         }
-        
-    }
 }
 

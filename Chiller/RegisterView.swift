@@ -70,8 +70,6 @@ class RegisterView: UIViewController, NSURLSessionDelegate {
         print("birthdate updated: \(birthdate!)")
         let date_b = NSDate()
         print("Years: \(date_b.yearsFrom(dateFormatter.dateFromString(birthdate)!))")
-        
-        
     }
     
     func dismissKeyboard(sender: UITapGestureRecognizer) -> Void {

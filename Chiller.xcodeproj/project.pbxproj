@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A32EAA71C1ABD7D0065B8D4 /* SearchPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A32EAA61C1ABD7D0065B8D4 /* SearchPerson.swift */; };
 		1A4172D31C116D5900417D6F /* appIcon.assests.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A4172D21C116D5900417D6F /* appIcon.assests.xcassets */; };
 		1A715E6F1C16291B00631BB4 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A715E621C16290D00631BB4 /* AlamofireImage.framework */; };
 		1A715E701C16291B00631BB4 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A715E621C16290D00631BB4 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -38,6 +39,9 @@
 		1A9C89811C1167EB0040C9E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9C89801C1167EB0040C9E9 /* Assets.xcassets */; };
 		1A9C898F1C1167EB0040C9E9 /* ChillerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9C898E1C1167EB0040C9E9 /* ChillerTests.swift */; };
 		1A9C899A1C1167EB0040C9E9 /* ChillerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9C89991C1167EB0040C9E9 /* ChillerUITests.swift */; };
+		1AC243E51C191C7000EE20C8 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC243E41C191C7000EE20C8 /* SearchCell.swift */; };
+		1AC243E71C191CDD00EE20C8 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC243E61C191CDD00EE20C8 /* SearchScreen.swift */; };
+		1AC244011C1A9B4200EE20C8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC244001C1A9B4200EE20C8 /* SwiftyJSON.swift */; };
 		1AEE78FD1C12CD11004AB084 /* MyAccountPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE78FC1C12CD11004AB084 /* MyAccountPage.swift */; };
 /* End PBXBuildFile section */
 
@@ -186,6 +190,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1A32EAA61C1ABD7D0065B8D4 /* SearchPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPerson.swift; sourceTree = "<group>"; };
 		1A4172D21C116D5900417D6F /* appIcon.assests.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = appIcon.assests.xcassets; sourceTree = "<group>"; };
 		1A715E561C16290D00631BB4 /* AlamofireImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AlamofireImage.xcodeproj; path = "Chiller/AlamofireImage-master/AlamofireImage.xcodeproj"; sourceTree = "<group>"; };
 		1A715E741C162B9700631BB4 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Chiller/Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
@@ -224,6 +229,9 @@
 		1A9C89951C1167EB0040C9E9 /* ChillerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChillerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9C89991C1167EB0040C9E9 /* ChillerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChillerUITests.swift; sourceTree = "<group>"; };
 		1A9C899B1C1167EB0040C9E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AC243E41C191C7000EE20C8 /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		1AC243E61C191CDD00EE20C8 /* SearchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
+		1AC244001C1A9B4200EE20C8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "SwiftyJSON-master/Source/SwiftyJSON.swift"; sourceTree = "<group>"; };
 		1AEE78FC1C12CD11004AB084 /* MyAccountPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -317,6 +325,7 @@
 				1A75929C1C117C7900F7BD3B /* LaunchScreen.storyboard */,
 				1A75929E1C117C7900F7BD3B /* Main.storyboard */,
 				1A7592751C117C2900F7BD3B /* LeftCategory.swift */,
+				1AC244001C1A9B4200EE20C8 /* SwiftyJSON.swift */,
 				1A7592761C117C2900F7BD3B /* LeftCategoryCell.swift */,
 				1A7592771C117C2900F7BD3B /* LoginForm.swift */,
 				1A7592781C117C2900F7BD3B /* MGSwipeButton.h */,
@@ -337,6 +346,9 @@
 				1A4172D21C116D5900417D6F /* appIcon.assests.xcassets */,
 				1A9C89801C1167EB0040C9E9 /* Assets.xcassets */,
 				1AEE78FC1C12CD11004AB084 /* MyAccountPage.swift */,
+				1AC243E41C191C7000EE20C8 /* SearchCell.swift */,
+				1AC243E61C191CDD00EE20C8 /* SearchScreen.swift */,
+				1A32EAA61C1ABD7D0065B8D4 /* SearchPerson.swift */,
 			);
 			path = Chiller;
 			sourceTree = "<group>";
@@ -430,7 +442,7 @@
 				TargetAttributes = {
 					1A9C89751C1167EB0040C9E9 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = PJE8423Y86;
+						DevelopmentTeam = GQ2LDBFH8V;
 					};
 					1A9C89891C1167EB0040C9E9 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -614,12 +626,16 @@
 				1A7592891C117C2900F7BD3B /* BackTableVC.swift in Sources */,
 				1A7592971C117C2900F7BD3B /* ServerRequestFactory.swift in Sources */,
 				1A75928A1C117C2900F7BD3B /* CategoryPost.swift in Sources */,
+				1AC243E51C191C7000EE20C8 /* SearchCell.swift in Sources */,
 				1A7592901C117C2900F7BD3B /* MGSwipeButton.m in Sources */,
 				1A75928D1C117C2900F7BD3B /* LeftCategory.swift in Sources */,
 				1A7592881C117C2900F7BD3B /* AppDelegate.swift in Sources */,
 				1A7592961C117C2900F7BD3B /* RightCategoryCell.swift in Sources */,
 				1AEE78FD1C12CD11004AB084 /* MyAccountPage.swift in Sources */,
+				1A32EAA71C1ABD7D0065B8D4 /* SearchPerson.swift in Sources */,
 				1A75928F1C117C2900F7BD3B /* LoginForm.swift in Sources */,
+				1AC243E71C191CDD00EE20C8 /* SearchScreen.swift in Sources */,
+				1AC244011C1A9B4200EE20C8 /* SwiftyJSON.swift in Sources */,
 				1A75929B1C117C2900F7BD3B /* ViewController.swift in Sources */,
 				1A75928E1C117C2900F7BD3B /* LeftCategoryCell.swift in Sources */,
 				1A7592911C117C2900F7BD3B /* MGSwipeTableCell.m in Sources */,
@@ -787,6 +803,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Chiller/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MK.Chiller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -804,6 +821,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Chiller/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MK.Chiller;
 				PRODUCT_NAME = "$(TARGET_NAME)";

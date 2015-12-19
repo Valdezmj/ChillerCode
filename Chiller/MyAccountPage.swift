@@ -17,13 +17,17 @@ class MyAccountPage : UIViewController, UIImagePickerControllerDelegate, UINavig
     var imageUrl = NSURL()
     let credentials = NSUserDefaults()
     
+    @IBOutlet weak var age: UILabel!
+    @IBOutlet weak var name: UILabel!
     @IBOutlet weak var uploadingPicture: UIActivityIndicatorView!
     override func viewDidLoad() {
         let url = NSURL(string: "http://baymaar.com/profile_pic/\(credentials.objectForKey("username")!)/profile.png")!
         let blankImage = UIImage()
         avatar.image = blankImage;
-        let filter = AspectScaledToFillSizeCircleFilter(size: CGSize(width: 100, height: 100));
-        avatar.af_setImageWithURL(url, placeholderImage: blankImage, filter: filter, imageTransition: UIImageView.ImageTransition.CrossDissolve(1))
+        let filter = AspectScaledToFillSizeCircleFilter(size: CGSize(width: 200, height: 200));
+        avatar.af_setImageWithURL(url, placeholderImage: blankImage, filter: filter, imageTransition: UIImageView.ImageTransition.FlipFromBottom(1))
+        name.text = String(credentials.objectForKey("name")!)
+        age.text = "\(credentials.objectForKey("age")!) years old"
         
     }
     @IBAction func goToLibrary(sender: AnyObject) {

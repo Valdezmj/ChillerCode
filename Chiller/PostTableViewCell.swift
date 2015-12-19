@@ -26,14 +26,7 @@ class PostTableViewCell: MGSwipeTableCell {
         let blankImage = UIImage(named: "")
         let filter = AspectScaledToFillSizeCircleFilter(size: CGSize(width: 100, height: 100));
         avatar.af_setImageWithURL(url, placeholderImage: blankImage, filter: filter, imageTransition: UIImageView.ImageTransition.CrossDissolve(1))
-
-        reloadInputViews()
     }
-    
-    override func reloadInputViews() {
-        
-    }
-    
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
