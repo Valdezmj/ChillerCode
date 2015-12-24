@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		1A32EAA71C1ABD7D0065B8D4 /* SearchPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A32EAA61C1ABD7D0065B8D4 /* SearchPerson.swift */; };
 		1A4172D31C116D5900417D6F /* appIcon.assests.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A4172D21C116D5900417D6F /* appIcon.assests.xcassets */; };
+		1A437A8E1C27F8EC007EFE3E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A437A8D1C27F8EC007EFE3E /* Notifications.swift */; };
+		1A437A901C27F981007EFE3E /* FriendRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A437A8F1C27F981007EFE3E /* FriendRequest.swift */; };
+		1A437A921C27F9F2007EFE3E /* FriendRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A437A911C27F9F2007EFE3E /* FriendRequestCell.swift */; };
+		1A437A941C27FA61007EFE3E /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A437A931C27FA61007EFE3E /* NotificationCell.swift */; };
+		1A437A961C27FBA5007EFE3E /* NotificationUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A437A951C27FBA5007EFE3E /* NotificationUpdate.swift */; };
+		1A437A981C2826E7007EFE3E /* PostCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A437A971C2826E7007EFE3E /* PostCreationView.swift */; };
 		1A715E6F1C16291B00631BB4 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A715E621C16290D00631BB4 /* AlamofireImage.framework */; };
 		1A715E701C16291B00631BB4 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A715E621C16290D00631BB4 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1A715E8C1C162BA500631BB4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A715E7F1C162B9700631BB4 /* Alamofire.framework */; };
@@ -192,6 +198,12 @@
 /* Begin PBXFileReference section */
 		1A32EAA61C1ABD7D0065B8D4 /* SearchPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPerson.swift; sourceTree = "<group>"; };
 		1A4172D21C116D5900417D6F /* appIcon.assests.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = appIcon.assests.xcassets; sourceTree = "<group>"; };
+		1A437A8D1C27F8EC007EFE3E /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		1A437A8F1C27F981007EFE3E /* FriendRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendRequest.swift; sourceTree = "<group>"; };
+		1A437A911C27F9F2007EFE3E /* FriendRequestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendRequestCell.swift; sourceTree = "<group>"; };
+		1A437A931C27FA61007EFE3E /* NotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		1A437A951C27FBA5007EFE3E /* NotificationUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationUpdate.swift; sourceTree = "<group>"; };
+		1A437A971C2826E7007EFE3E /* PostCreationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCreationView.swift; sourceTree = "<group>"; };
 		1A715E561C16290D00631BB4 /* AlamofireImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AlamofireImage.xcodeproj; path = "Chiller/AlamofireImage-master/AlamofireImage.xcodeproj"; sourceTree = "<group>"; };
 		1A715E741C162B9700631BB4 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Chiller/Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		1A75926E1C117C2900F7BD3B /* animal496.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animal496.png; sourceTree = "<group>"; };
@@ -349,6 +361,12 @@
 				1AC243E41C191C7000EE20C8 /* SearchCell.swift */,
 				1AC243E61C191CDD00EE20C8 /* SearchScreen.swift */,
 				1A32EAA61C1ABD7D0065B8D4 /* SearchPerson.swift */,
+				1A437A8D1C27F8EC007EFE3E /* Notifications.swift */,
+				1A437A8F1C27F981007EFE3E /* FriendRequest.swift */,
+				1A437A911C27F9F2007EFE3E /* FriendRequestCell.swift */,
+				1A437A931C27FA61007EFE3E /* NotificationCell.swift */,
+				1A437A951C27FBA5007EFE3E /* NotificationUpdate.swift */,
+				1A437A971C2826E7007EFE3E /* PostCreationView.swift */,
 			);
 			path = Chiller;
 			sourceTree = "<group>";
@@ -626,6 +644,7 @@
 				1A7592891C117C2900F7BD3B /* BackTableVC.swift in Sources */,
 				1A7592971C117C2900F7BD3B /* ServerRequestFactory.swift in Sources */,
 				1A75928A1C117C2900F7BD3B /* CategoryPost.swift in Sources */,
+				1A437A941C27FA61007EFE3E /* NotificationCell.swift in Sources */,
 				1AC243E51C191C7000EE20C8 /* SearchCell.swift in Sources */,
 				1A7592901C117C2900F7BD3B /* MGSwipeButton.m in Sources */,
 				1A75928D1C117C2900F7BD3B /* LeftCategory.swift in Sources */,
@@ -638,12 +657,17 @@
 				1AC244011C1A9B4200EE20C8 /* SwiftyJSON.swift in Sources */,
 				1A75929B1C117C2900F7BD3B /* ViewController.swift in Sources */,
 				1A75928E1C117C2900F7BD3B /* LeftCategoryCell.swift in Sources */,
+				1A437A961C27FBA5007EFE3E /* NotificationUpdate.swift in Sources */,
 				1A7592911C117C2900F7BD3B /* MGSwipeTableCell.m in Sources */,
 				1A7592991C117C2900F7BD3B /* SWRevealViewController.m in Sources */,
 				1A7592941C117C2900F7BD3B /* RegisterView.swift in Sources */,
+				1A437A8E1C27F8EC007EFE3E /* Notifications.swift in Sources */,
+				1A437A921C27F9F2007EFE3E /* FriendRequestCell.swift in Sources */,
 				1A7592951C117C2900F7BD3B /* RightCategory.swift in Sources */,
 				1A75928B1C117C2900F7BD3B /* FriendSection.swift in Sources */,
 				1A7592921C117C2900F7BD3B /* Post.swift in Sources */,
+				1A437A901C27F981007EFE3E /* FriendRequest.swift in Sources */,
+				1A437A981C2826E7007EFE3E /* PostCreationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,7 +827,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Chiller/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MK.Chiller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -821,7 +845,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Chiller/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MK.Chiller;
 				PRODUCT_NAME = "$(TARGET_NAME)";

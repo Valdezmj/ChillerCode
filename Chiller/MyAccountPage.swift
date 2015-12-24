@@ -24,8 +24,8 @@ class MyAccountPage : UIViewController, UIImagePickerControllerDelegate, UINavig
         let url = NSURL(string: "http://baymaar.com/profile_pic/\(credentials.objectForKey("username")!)/profile.png")!
         let blankImage = UIImage()
         avatar.image = blankImage;
-        let filter = AspectScaledToFillSizeCircleFilter(size: CGSize(width: 200, height: 200));
-        avatar.af_setImageWithURL(url, placeholderImage: blankImage, filter: filter, imageTransition: UIImageView.ImageTransition.FlipFromBottom(1))
+        let filter = AspectScaledToFillSizeCircleFilter(size: CGSize(width: 100, height: 100));
+        avatar.af_setImageWithURL(url, placeholderImage: blankImage, filter: filter, imageTransition: UIImageView.ImageTransition.None)
         name.text = String(credentials.objectForKey("name")!)
         age.text = "\(credentials.objectForKey("age")!) years old"
         
@@ -47,7 +47,14 @@ class MyAccountPage : UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
     {
-        print("image picked!")
+        let url = NSURL(string: "http://baymaar.com/profile_pic/\(credentials.objectForKey("username")!)/profile.png")!
+        let URLRequest = NSURLRequest(URL: url)
+        
+        let imageDownloader = UIImageView.af_sharedImageDownloader
+        imageDownloader.imageCache?.removeAllImages()
+        // Clear the URLRequest from the on-disk cache
+        imageDownloader.sessionManager.session.configuration.URLCache?.removeCachedResponseForRequest(URLRequest)
+
         var img = info[UIImagePickerControllerOriginalImage] as? UIImage
         avatar.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         avatar.image = img?.af_imageRoundedIntoCircle()

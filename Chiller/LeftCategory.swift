@@ -17,13 +17,14 @@ class LeftCategory : UIViewController, UITableViewDataSource, UITableViewDelegat
     @IBOutlet weak var leftTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadPosters()        
+        self.loadPosters()
+        leftTableView.backgroundColor = UIColor.clearColor()
     }
     
     func loadPosters() {
         let photo1 = UIImage(named: "tracks")
-        let personOne = Post(name: "Location Name", body: "Free pancakes only today!", title: "Offering free pancakes", image: photo1!, chill: false, burn: false)
-        let personTwo = Post(name: "Location Name", body: "Free pancakes only today!", title: "Offering free pancakes", image: photo1!, chill: false, burn: false)
+        let personOne = Post(name: "Location Name", body: "Free pancakes only today!", title: "Offering free pancakes", image: "tracks", chill: false, burn: false)
+        let personTwo = Post(name: "Location Name", body: "Free pancakes only today!", title: "Offering free pancakes", image: "tracks", chill: false, burn: false)
         
         posts += [personOne, personTwo]
         
@@ -56,6 +57,7 @@ class LeftCategory : UIViewController, UITableViewDataSource, UITableViewDelegat
         let blankImage = UIImage()
         let filter = RoundedCornersFilter(radius: 15.0)
         cell.avatar.af_setImageWithURL(url, placeholderImage: blankImage, filter: filter, imageTransition: UIImageView.ImageTransition.CrossDissolve(1))
+        cell.backgroundColor = UIColor.clearColor()
 
         
         return cell

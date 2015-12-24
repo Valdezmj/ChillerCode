@@ -9,6 +9,7 @@
 import Foundation
 
 class BackTableVC: UIViewController {
+    @IBOutlet weak var scrollView: UIScrollView!
     let credentials = NSUserDefaults()
 
     @IBAction func goToProfile(sender: AnyObject) {
@@ -21,6 +22,7 @@ class BackTableVC: UIViewController {
         performSegueWithIdentifier("load_login", sender: self)
     }
     override func viewDidLoad() {
+        scrollView.contentSize.height = 680
         
     }
 }

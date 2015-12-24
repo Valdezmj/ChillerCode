@@ -9,47 +9,65 @@
 import Foundation
 import WebKit
 import AlamofireImage
+import Alamofire
 
 
 
-class FriendSection : UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FriendSection : UIViewController, UITableViewDataSource, UITableViewDelegate, UIPopoverPresentationControllerDelegate {
+    @IBOutlet weak var postBtn: UIButton!
     var posts = [Post]()
     var defaultImage  = UIImage()
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "reloadTable:", forControlEvents: UIControlEvents.ValueChanged)
+        
+        return refreshControl
+    }()
+    let credentials = NSUserDefaults()
+    let imageDownloader = UIImageView.af_sharedImageDownloader
+
     @IBOutlet weak var postTable: UITableView!
     
+    @IBAction func displayPostCreation(sender: AnyObject!) {
+            
+    }
     @IBAction func reloadTable(sender: AnyObject) {
         loadPosters()
-        let credentials = NSUserDefaults()
-        let url = NSURL(string: "http://baymaar.com/profile_pic/\(credentials.objectForKey("username")!)/profile.png")!
-        let URLRequest = NSURLRequest(URL: url)
-        
-        let imageDownloader = UIImageView.af_sharedImageDownloader
-        imageDownloader.imageCache?.removeAllImages()
-        // Clear the URLRequest from the on-disk cache
-        imageDownloader.sessionManager.session.configuration.URLCache?.removeCachedResponseForRequest(URLRequest)
-        self.postTable.reloadData()
+        self.refreshControl.endRefreshing()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         postTable.delegate = self
         postTable.dataSource = self
         print("view did load!")
-        loadPosters()
+        if ((credentials.objectForKey("username")) != nil) {
+            loadPosters()
+        }
+        self.postTable.backgroundColor = UIColor(white: 1, alpha: 0.0)
+        self.view.backgroundColor = UIColor(white: 1, alpha: 0.0)
+        self.postTable.addSubview(self.refreshControl)
     }
     override func viewWillAppear(animated: Bool) {
         }
     
     func loadPosters() {
-        print("Posters loaded!")
-        let personOne = Post(name: "Michael Valdez", body: "2499 S. Colorado Blvd.\n put in 904 at the door and I'll let you up.", title: "Party at my house", image: defaultImage, chill: false, burn: false)
-        let personTwo = Post(name: "Karlie Hanson", body: "just watching game of thrones with bay", title: "Netflix and chill", image: defaultImage, chill: false, burn: false)
-        let personThree = Post(name: "Kyle Daniels", body: "text me if you're going", title: "Going to tracks tonight", image: defaultImage, chill: false, burn: false)
-        let personFour = Post(name: "Thirsty Bridge", body: "only come if you looking to get deez nuts", title: "Fuck at my place", image: defaultImage, chill: false, burn: false)
-        let personFive = Post(name: "Austin Muck", body: "I will be your casanova", title: "Make love all night long in my bed", image: defaultImage, chill: false, burn: false)
-        let personSix = Post(name: "Ryan Sanchez", body: "I am a marine so I can beat you and your daddy's ass", title: "Beat down in my tent", image: defaultImage, chill: false, burn: false)
-        
-        posts += [personOne, personTwo, personThree, personFour, personFive, personSix]
-        
+        self.posts.removeAll()
+        let url : String = "http://baymaar.com/xj68123wqdgrego2/getPosts.php";
+        Alamofire.request(.POST, "\(url)" , parameters:["username" : "\(credentials.objectForKey("username")!)"]).responseJSON() {
+            (response) in
+            if response.data != nil {
+                let _r = JSON(data: response.data!)
+                if (_r["result"].stringValue == "1") {
+                    for (_,subJson):(String, JSON) in _r["posts"] {
+                        self.posts.append(Post(name: subJson["user"]["name"].stringValue, body: subJson["post"]["body"].stringValue, title: subJson["post"]["title"].stringValue, image: subJson["user"]["pic"].stringValue, chill: false, burn: false))
+                    }
+                    self.postTable.reloadData()
+                }
+                
+            } else {
+                print("Couldn't get a response to check credentials: \(response.data)")
+            }
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,7 +88,7 @@ class FriendSection : UIViewController, UITableViewDataSource, UITableViewDelega
                 self.posts[indexPath.row].chill = false
             }
             if (self.posts[indexPath.row].burn == true) {
-                cell.chillTag.text = "BURNED"
+                cell.chillTag.text = "burned"
             }
             self.postTable.reloadData()
             return true
@@ -111,12 +129,14 @@ class FriendSection : UIViewController, UITableViewDataSource, UITableViewDelega
             cell.chillTag.backgroundColor = UIColor.blueColor()
             cell.chillTag.text = "chilling"
         }
-        let credentials = NSUserDefaults()
-        let url = NSURL(string: "http://baymaar.com/profile_pic/\(credentials.objectForKey("username")!)/profile.png")!
-        let blankImage = UIImage(named: "")
+        let url = NSURL(string: "\(_post.img!)")!
+        let blankImage = UIImage(named: "defaultAvatar.png")
         let filter = AspectScaledToFillSizeCircleFilter(size: CGSize(width: 100, height: 100));
+        let URLRequest = NSURLRequest(URL: url)
+        imageDownloader.sessionManager.session.configuration.URLCache?.removeCachedResponseForRequest(URLRequest)
         cell.avatar.af_setImageWithURL(url, placeholderImage: blankImage, filter: filter, imageTransition: UIImageView.ImageTransition.CrossDissolve(1))
         print("Cell loaded!")
+        cell.backgroundColor = UIColor.clearColor()
         return cell
     }
 }

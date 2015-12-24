@@ -11,48 +11,100 @@ import WebKit
 import AlamofireImage
 import Alamofire
 
-class Search : UIViewController,UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var searchBar: UISearchBar!
+class Search : UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating {
+    @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var backBtn: UIBarButtonItem!
+    var searchBar = UISearchController()
     @IBOutlet weak var tableView: UITableView!
     var people = [SearchPerson]()
-    var filteredPeople = [SearchPerson]()
+    let credentials = NSUserDefaults()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.definesPresentationContext = true;
         print("Right view did load!")
+        self.searchBar = UISearchController(searchResultsController: nil)
+        self.searchBar.searchResultsUpdater = self
+        
+        self.searchBar.dimsBackgroundDuringPresentation = false
+        self.searchBar.searchBar.sizeToFit()
+        self.searchBar.searchBar.placeholder = "Friend's Username"
+        
+        tableView.tableHeaderView = self.searchBar.searchBar
         tableView.delegate = self
         tableView.dataSource = self
         
+        self.tableView.reloadData()
     }
-    override func viewWillAppear(animated: Bool) {
-        let personOne = SearchPerson(userid: "3", username: "mikeyv", pic: "wfwefw")
-        let personTwo = SearchPerson(userid: "3", username: "user two", pic: "wfwefw")
-        let personThree = SearchPerson(userid: "3", username: "user five", pic: "wfwefw")
-        people.append(personOne)
-        people.append(personTwo)
-        people.append(personThree)
     
+    override func viewWillDisappear(animated: Bool) {
+        self.view.endEditing(true)
     }
+    
+    @IBAction func backBtnTouched(sender: AnyObject) {
+        self.searchBar.active = false
+        self.tableView.tableHeaderView?.hidden = true
+        self.searchBar.searchBar.endEditing(true)
+        self.searchBar.searchBar.resignFirstResponder()
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.people.count
+        return people.count
     }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        
+        let url : String = "http://baymaar.com/xj68123wqdgrego2/search.php";
+        Alamofire.request(.POST, "\(url)" , parameters:["search" : "\(searchBar.searchBar.text!)", "username" : "\(credentials.objectForKey("username")!)"]).responseJSON() {
+            (response) in
+            if response.data != nil {
+                let _r = JSON(data: response.data!)
+                if (_r["result"]) {
+                    self.people.removeAll(keepCapacity: false)
+                    for (_,subJson):(String, JSON) in _r["users"] {
+                        self.people.append(SearchPerson(userid: subJson["id"].stringValue, username: subJson["name"].stringValue, pic: subJson["pic"].stringValue))
+                    }
+                    self.tableView.reloadData()
+                }
+                //print(_r)
+                
+            } else {
+                print("Couldn't get a response to check credentials: \(response.data)")
+            }
+        }
+        
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        print("Another cell")
         let reuseIdentifier = "SearchCell"
         var cell = self.tableView.dequeueReusableCellWithIdentifier(reuseIdentifier) as! SearchCell!
         if cell == nil
         {
             cell = SearchCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: reuseIdentifier)
         }
-        cell.leftButtons = [MGSwipeButton(title: "Add", backgroundColor: UIColor.greenColor(), callback: {
+        cell.leftButtons = [MGSwipeButton(title: "", icon: UIImage(named:"addUser.png"), backgroundColor: UIColor.greenColor(), callback: {
             (sender: MGSwipeTableCell!) -> Bool in
-            
+            let url : String = "http://baymaar.com/xj68123wqdgrego2/addFriend.php";
+            Alamofire.request(.POST, "\(url)" , parameters:["add_userid" : "\(self.people[indexPath.row].userid)", "userid" : "\(self.credentials.objectForKey("userid")!)"])
             return true
         })]
-        let _p = people[indexPath.row]
-        cell.leftSwipeSettings.transition = MGSwipeTransition.ClipCenter
-        print("\(_p.username)")
+        
+        let person = self.people[indexPath.row]
+        cell._name.text = person.username
+        let url = NSURL(string: "\(person.pic)")
+        let blankImage = UIImage(named: "defaultAvatar.png")
+        let filter = AspectScaledToFillSizeCircleFilter(size: CGSize(width: 80, height: 80));
+        cell._pic.af_setImageWithURL(url!, placeholderImage: blankImage, filter: filter, imageTransition: UIImageView.ImageTransition.CrossDissolve(1))
+        
         return cell
     }
- 
     
 }

@@ -11,14 +11,12 @@ import AlamofireImage
 import Alamofire
 
 class SearchCell: MGSwipeTableCell {
-    let credentials = NSUserDefaults()
-    
-    @IBOutlet weak var _na: UILabel!
+    @IBOutlet weak var _pic: UIImageView!
+    @IBOutlet weak var _name: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         //Initialization code
-        let credentials = NSUserDefaults()
-    }    
+    }
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         

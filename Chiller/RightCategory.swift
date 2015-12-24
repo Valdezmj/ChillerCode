@@ -19,10 +19,9 @@ class RightCategory : UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var rightTableView: UITableView!
     
     func loadPosters() {
-        let photo1 = UIImage(named:"tracks")
-        let personOne = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1, chill: false, burn: false)
-        let personTwo = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1, chill: false, burn: false)
-        let personThree = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: photo1, chill: false, burn: false)
+        let personOne = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: "tracks", chill: false, burn: false)
+        let personTwo = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: "tracks", chill: false, burn: false)
+        let personThree = Post(name: "Location Name", body: "Beer!", title: "Offering free beer", image: "tracks", chill: false, burn: false)
         
         posts.append(personOne)
         posts.append(personTwo)
@@ -56,8 +55,7 @@ class RightCategory : UIViewController, UITableViewDataSource, UITableViewDelega
         let blankImage = UIImage()
         let filter = RoundedCornersFilter(radius: 15.0)
         cell.avatar.af_setImageWithURL(url, placeholderImage: blankImage, filter: filter, imageTransition: UIImageView.ImageTransition.CrossDissolve(1))
-
-
+        cell.backgroundColor = UIColor.clearColor()
         
         return cell
     }
