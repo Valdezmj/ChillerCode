@@ -68,6 +68,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
+    @IBAction func prepareForUnwind(sender: UIStoryboardSegue) {
+        
+    }
     
     override func disablesAutomaticKeyboardDismissal() -> Bool {
         return false

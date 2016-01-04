@@ -17,15 +17,35 @@ class MyAccountPage : UIViewController, UIImagePickerControllerDelegate, UINavig
     var imageUrl = NSURL()
     let credentials = NSUserDefaults()
     
+    @IBAction func back(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     @IBOutlet weak var age: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var uploadingPicture: UIActivityIndicatorView!
     override func viewDidLoad() {
-        let url = NSURL(string: "http://baymaar.com/profile_pic/\(credentials.objectForKey("username")!)/profile.png")!
-        let blankImage = UIImage()
-        avatar.image = blankImage;
-        let filter = AspectScaledToFillSizeCircleFilter(size: CGSize(width: 100, height: 100));
-        avatar.af_setImageWithURL(url, placeholderImage: blankImage, filter: filter, imageTransition: UIImageView.ImageTransition.None)
+        if credentials.objectForKey("pic") != nil {
+            let url = NSURL(string: "\(credentials.objectForKey("pic")!)")!
+            let blankImage = UIImage()
+            self.avatar.image = blankImage;
+            let filter = AspectScaledToFillSizeCircleFilter(size: CGSize(width: 100, height: 100));
+            self.avatar.af_setImageWithURL(url, placeholderImage: blankImage, filter: filter, imageTransition: UIImageView.ImageTransition.CrossDissolve(0.2))
+        }
+        let parameters = [
+            "username": "\(credentials.objectForKey("username")!)"
+        ]
+        Alamofire.request(.POST, "http://192.168.1.121/xj68123wqdgrego2/getProfileUrl.php", parameters: parameters).responseJSON() {
+            response in
+            if (response.data != nil) {
+                let _r = JSON(data: response.data!)
+                self.credentials.setObject("\(_r["pic"].stringValue)", forKey: "pic")
+                let url = NSURL(string: "\(_r["pic"].stringValue)")!
+                let blankImage = UIImage()
+                self.avatar.image = blankImage;
+                let filter = AspectScaledToFillSizeCircleFilter(size: CGSize(width: 100, height: 100));
+                self.avatar.af_setImageWithURL(url, placeholderImage: blankImage, filter: filter, imageTransition: UIImageView.ImageTransition.CrossDissolve(0.2))
+            }
+        }
         name.text = String(credentials.objectForKey("name")!)
         age.text = "\(credentials.objectForKey("age")!) years old"
         
@@ -47,19 +67,11 @@ class MyAccountPage : UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
     {
-        let url = NSURL(string: "http://baymaar.com/profile_pic/\(credentials.objectForKey("username")!)/profile.png")!
-        let URLRequest = NSURLRequest(URL: url)
-        
-        let imageDownloader = UIImageView.af_sharedImageDownloader
-        imageDownloader.imageCache?.removeAllImages()
-        // Clear the URLRequest from the on-disk cache
-        imageDownloader.sessionManager.session.configuration.URLCache?.removeCachedResponseForRequest(URLRequest)
-
         var img = info[UIImagePickerControllerOriginalImage] as? UIImage
         avatar.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         avatar.image = img?.af_imageRoundedIntoCircle()
         img = fixImageOrientation(img!)
-        let imageData = UIImagePNGRepresentation(img!)
+        let imageData = UIImageJPEGRepresentation(img!, 0.0)
         
         let base64String = imageData!.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
         
@@ -68,7 +80,7 @@ class MyAccountPage : UIViewController, UIImagePickerControllerDelegate, UINavig
             "user": "\(credentials.objectForKey("username")!)"
         ]
         uploadingPicture.startAnimating()
-        Alamofire.request(.POST, "http://baymaar.com/xj68123wqdgrego2/testUpdateProfile.php", parameters:parameters) .responseJSON {
+        Alamofire.request(.POST, "http://192.168.1.121/xj68123wqdgrego2/testUpdateProfile.php", parameters:parameters) .responseJSON {
             response in
             print(response)
             self.uploadingPicture.stopAnimating()

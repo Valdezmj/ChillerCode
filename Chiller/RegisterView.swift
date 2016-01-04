@@ -35,6 +35,11 @@ extension NSDate {
 }
 class RegisterView: UIViewController, NSURLSessionDelegate {
     
+    @IBOutlet weak var birthdateLabel: UILabel!
+    @IBOutlet weak var relationship: UIPickerView!
+    @IBOutlet weak var preference: UIPickerView!
+    @IBOutlet weak var gender: UIPickerView!
+    @IBOutlet weak var city: UITextField!
     @IBOutlet weak var birthDatePicker: UIDatePicker!
     @IBOutlet weak var createBtn: UIButton!
     @IBOutlet weak var firstName: UITextField!
@@ -168,15 +173,13 @@ class RegisterView: UIViewController, NSURLSessionDelegate {
     }
     
     @IBAction func createAccount(sender: UIButton!) {
-        let url : String = "http://baymaar.com/xj68123wqdgrego2/testCreateAccount.php";
-        
+        let url : String = "http://192.168.1.121/xj68123wqdgrego2/testCreateAccount.php";
         Alamofire.request(.POST, "\(url)" , parameters:["username" : "\((username.text?.lowercaseString)!)", "birth" :
-            "\(birthdate!)", "profile" : "http://baymaar.com/profile_pic/\((username.text?.lowercaseString)!)/profile.png", "email" : "\(email.text!)", "firstname" : "\(firstName.text!)", "lastname" : "\(lastName.text!)", "password" : "\(password.text)", "active"  : "1"]).responseJSON() {
+            "\(birthdate!)", "profile" : "http://192.168.1.121/profile_pic/\((username.text?.lowercaseString)!)/profile.jpeg", "email" : "\(email.text!)", "firstname" : "\(firstName.text!)", "lastname" : "\(lastName.text!)", "password" : "\(password.text)", "active"  : "1"]).responseJSON() {
                 (response) in
                 if response.data != nil {
                     let _r = JSON(data: response.data!)
                     if (_r["result"].stringValue == "1") {
-                        print(_r)
                         self.animateUnload()
                     }
                 } else {

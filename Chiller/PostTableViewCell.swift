@@ -11,6 +11,7 @@ import AlamofireImage
 class PostTableViewCell: MGSwipeTableCell {
     
 
+    @IBOutlet weak var postTime: UILabel!
     @IBOutlet weak var chillTag: UILabel!
     @IBOutlet weak var postname: UILabel!
     @IBOutlet weak var postBody: UILabel!
@@ -22,7 +23,7 @@ class PostTableViewCell: MGSwipeTableCell {
         super.awakeFromNib()
          //Initialization code
         let credentials = NSUserDefaults()
-        let url = NSURL(string: "http://baymaar.com/profile_pic/\(credentials.objectForKey("username")!)/profile.png")!
+        let url = NSURL(string: "http://192.168.1.121/profile_pic/\(credentials.objectForKey("username")!)/profile.png")!
         let blankImage = UIImage(named: "")
         let filter = AspectScaledToFillSizeCircleFilter(size: CGSize(width: 100, height: 100));
         avatar.af_setImageWithURL(url, placeholderImage: blankImage, filter: filter, imageTransition: UIImageView.ImageTransition.CrossDissolve(1))

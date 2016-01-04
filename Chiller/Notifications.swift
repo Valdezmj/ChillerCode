@@ -26,8 +26,7 @@ class Notifications : UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         self.definesPresentationContext = true;
-        let url : String = "http://baymaar.com/xj68123wqdgrego2/friendRequests.php";
-        let urlTwo : String = "http://baymaar.com/xj68123wqdgrego2/friendRequests.php";
+        let url : String = "http://192.168.1.121/xj68123wqdgrego2/friendRequests.php";
         friendTable.delegate = self
         friendTable.dataSource = self
         notificationTable.delegate = self
@@ -65,7 +64,7 @@ class Notifications : UIViewController, UITableViewDataSource, UITableViewDelega
     func reloadFriendTable(sender: AnyObject!) {
         self.friendRequest.removeAll(keepCapacity: false)
         self.friendTable.reloadData()
-        let url : String = "http://baymaar.com/xj68123wqdgrego2/friendRequests.php";
+        let url : String = "http://192.168.1.121/xj68123wqdgrego2/friendRequests.php";
         Alamofire.request(.POST, "\(url)" , parameters:["userid" : "\(credentials.objectForKey("userid")!)"]).responseJSON() {
             (response) in
             if response.data != nil {
@@ -126,14 +125,14 @@ class Notifications : UIViewController, UITableViewDataSource, UITableViewDelega
             }
             cell.leftButtons = [MGSwipeButton(title: "", icon: UIImage(named:"delete.png"), backgroundColor: UIColor.redColor(), callback: {
                 (sender: MGSwipeTableCell!) -> Bool in
-                let url : String = "http://baymaar.com/xj68123wqdgrego2/rejectFriendRequest.php";
+                let url : String = "http://192.168.1.121/xj68123wqdgrego2/rejectFriendRequest.php";
                 Alamofire.request(.POST, "\(url)" , parameters:["userid" : "\(self.credentials.objectForKey("userid")!)", "add_userid" : "\(self.friendRequest[indexPath.row].userid)"])
                 self.friendRequest.removeAtIndex(indexPath.row)
                 self.friendTable.reloadData()
                 return true
             }), MGSwipeButton(title: "", icon: UIImage(named:"check.png"), backgroundColor: UIColor.greenColor(), callback: {
                 (sender: MGSwipeTableCell!) -> Bool in
-                let url : String = "http://baymaar.com/xj68123wqdgrego2/acceptFriend.php";
+                let url : String = "http://192.168.1.121/xj68123wqdgrego2/acceptFriend.php";
                 Alamofire.request(.POST, "\(url)" , parameters:["userid" : "\(self.credentials.objectForKey("userid")!)", "add_userid" : "\(self.friendRequest[indexPath.row].userid)"])
                 self.friendRequest.removeAtIndex(indexPath.row)
                 self.friendTable.reloadData()

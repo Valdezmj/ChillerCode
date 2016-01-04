@@ -18,14 +18,12 @@ class PostCreationView: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBAction func createPost(sender: AnyObject) {
         indicator.startAnimating()
-        self.dismissViewControllerAnimated(true, completion: nil)
-        let url : String = "http://baymaar.com/xj68123wqdgrego2/submitPost.php";
+        let url : String = "http://192.168.1.121/xj68123wqdgrego2/submitPost.php";
         Alamofire.request(.POST, "\(url)" , parameters:["body" : "\(body.text!)", "userid" : "\(self.credentials.objectForKey("userid")!)", "title" : "\(__title.text!)"]).responseJSON() {
             (response) in
             if response.data != nil {
                 let _r = JSON(data: response.data!)
-                if _r["result"].stringValue == "1"
-                {
+                if _r["result"].stringValue == "1" {
                     self.indicator.stopAnimating()
                     self.dismissViewControllerAnimated(true, completion: nil)
                 }

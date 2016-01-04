@@ -31,6 +31,21 @@ extension CGColor {
     }
     
 }
+extension String {
+    
+    func base64Encoded() -> String {
+        let plainData = dataUsingEncoding(NSUTF8StringEncoding)
+        let base64String = plainData?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
+        return base64String!
+    }
+    
+    func base64Decoded() -> UIImage {
+        let decodedData = NSData(base64EncodedString: self, options: NSDataBase64DecodingOptions(rawValue: 0))
+        //NSData to UIImage
+        let decodedIamge = UIImage(data: decodedData!)
+        return decodedIamge!
+    }
+}
 extension UIColor {
     convenience init(hexString: String) {
         let hex = hexString.stringByTrimmingCharactersInSet(NSCharacterSet.alphanumericCharacterSet().invertedSet)

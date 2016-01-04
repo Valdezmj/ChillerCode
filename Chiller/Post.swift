@@ -17,13 +17,15 @@ class Post {
     var img: String!
     var chill: Bool!
     var burn: Bool!
+    var time: String!
     
-    init(name: String!, body: String? = nil, title: String!,  image: String!, chill: Bool!, burn: Bool!) {
+    init(name: String!, body: String? = nil, title: String!,  image: String!, chill: Bool!, burn: Bool!, time: String!) {
         self.name = name
         self.title = title
         self.body = body
         self.img = image
         self.chill = chill.boolValue
         self.burn = burn.boolValue
+        self.time = time
     }
 }

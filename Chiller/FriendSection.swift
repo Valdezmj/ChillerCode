@@ -25,6 +25,8 @@ class FriendSection : UIViewController, UITableViewDataSource, UITableViewDelega
     }()
     let credentials = NSUserDefaults()
     let imageDownloader = UIImageView.af_sharedImageDownloader
+    let cache = AutoPurgingImageCache()
+
 
     @IBOutlet weak var postTable: UITableView!
     
@@ -52,14 +54,14 @@ class FriendSection : UIViewController, UITableViewDataSource, UITableViewDelega
     
     func loadPosters() {
         self.posts.removeAll()
-        let url : String = "http://baymaar.com/xj68123wqdgrego2/getPosts.php";
+        let url : String = "http://192.168.1.121/xj68123wqdgrego2/getPosts.php";
         Alamofire.request(.POST, "\(url)" , parameters:["username" : "\(credentials.objectForKey("username")!)"]).responseJSON() {
             (response) in
             if response.data != nil {
                 let _r = JSON(data: response.data!)
-                if (_r["result"].stringValue == "1") {
+                if (_r["result"].string! == "1") {
                     for (_,subJson):(String, JSON) in _r["posts"] {
-                        self.posts.append(Post(name: subJson["user"]["name"].stringValue, body: subJson["post"]["body"].stringValue, title: subJson["post"]["title"].stringValue, image: subJson["user"]["pic"].stringValue, chill: false, burn: false))
+                        self.posts.append(Post(name: subJson["user"]["name"].stringValue, body: subJson["post"]["body"].stringValue, title: subJson["post"]["title"].stringValue, image: subJson["user"]["pic"].stringValue, chill: false, burn: false, time: subJson["post"]["time"].stringValue))
                     }
                     self.postTable.reloadData()
                 }
@@ -121,6 +123,7 @@ class FriendSection : UIViewController, UITableViewDataSource, UITableViewDelega
         cell.postname.text = _post.name
         cell.postBody.text = _post.body
         cell.postTitle.text = _post.title
+        cell.postTime.text = _post.time
         cell.chillTag.hidden = (!_post.burn.boolValue && !_post.chill.boolValue)
         if (_post.burn == true) {
             cell.chillTag.backgroundColor = UIColor.redColor()
@@ -129,14 +132,18 @@ class FriendSection : UIViewController, UITableViewDataSource, UITableViewDelega
             cell.chillTag.backgroundColor = UIColor.blueColor()
             cell.chillTag.text = "chilling"
         }
-        let url = NSURL(string: "\(_post.img!)")!
-        let blankImage = UIImage(named: "defaultAvatar.png")
+        let url = NSURL(string: _post.img)
+        let request = NSURLRequest(URL: url!)
+        imageDownloader.imageCache?.removeImageForRequest(request, withAdditionalIdentifier: "avatar")
+        let blankImage = UIImage(named: "defaultAvatar")
+        cell.avatar.image = blankImage;
         let filter = AspectScaledToFillSizeCircleFilter(size: CGSize(width: 100, height: 100));
-        let URLRequest = NSURLRequest(URL: url)
-        imageDownloader.sessionManager.session.configuration.URLCache?.removeCachedResponseForRequest(URLRequest)
-        cell.avatar.af_setImageWithURL(url, placeholderImage: blankImage, filter: filter, imageTransition: UIImageView.ImageTransition.CrossDissolve(1))
+        cell.avatar.af_setImageWithURL(url!, placeholderImage: blankImage, filter: filter, imageTransition: UIImageView.ImageTransition.CrossDissolve(0.2))
         print("Cell loaded!")
         cell.backgroundColor = UIColor.clearColor()
+        cell.preservesSuperviewLayoutMargins = false
+        cell.separatorInset = UIEdgeInsetsZero
+        cell.layoutMargins = UIEdgeInsetsZero
         return cell
     }
 }

@@ -12,12 +12,14 @@ import AlamofireImage
 import Alamofire
 
 class Search : UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating {
+    @IBOutlet var tap: UITapGestureRecognizer!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var backBtn: UIBarButtonItem!
     var searchBar = UISearchController()
     @IBOutlet weak var tableView: UITableView!
     var people = [SearchPerson]()
     let credentials = NSUserDefaults()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.definesPresentationContext = true;
@@ -32,6 +34,10 @@ class Search : UIViewController, UITableViewDataSource, UITableViewDelegate, UIS
         tableView.tableHeaderView = self.searchBar.searchBar
         tableView.delegate = self
         tableView.dataSource = self
+        tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard:")
+        tap.numberOfTouchesRequired = 1;
+        tap.numberOfTapsRequired = 1;
+        view.addGestureRecognizer(tap)
         
         self.tableView.reloadData()
     }
@@ -43,13 +49,16 @@ class Search : UIViewController, UITableViewDataSource, UITableViewDelegate, UIS
     @IBAction func backBtnTouched(sender: AnyObject) {
         self.searchBar.active = false
         self.tableView.tableHeaderView?.hidden = true
-        self.searchBar.searchBar.endEditing(true)
-        self.searchBar.searchBar.resignFirstResponder()
+        self.dismissViewControllerAnimated(true, completion: nil)
         
     }
     
     override func viewWillAppear(animated: Bool) {
         
+    }
+    func dismissKeyboard(sender: UITapGestureRecognizer) -> Void {
+        self.searchBar.resignFirstResponder()
+        self.searchBar.searchBar.resignFirstResponder()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,7 +71,7 @@ class Search : UIViewController, UITableViewDataSource, UITableViewDelegate, UIS
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         
-        let url : String = "http://baymaar.com/xj68123wqdgrego2/search.php";
+        let url : String = "http://192.168.1.121/xj68123wqdgrego2/search.php";
         Alamofire.request(.POST, "\(url)" , parameters:["search" : "\(searchBar.searchBar.text!)", "username" : "\(credentials.objectForKey("username")!)"]).responseJSON() {
             (response) in
             if response.data != nil {
@@ -92,7 +101,7 @@ class Search : UIViewController, UITableViewDataSource, UITableViewDelegate, UIS
         }
         cell.leftButtons = [MGSwipeButton(title: "", icon: UIImage(named:"addUser.png"), backgroundColor: UIColor.greenColor(), callback: {
             (sender: MGSwipeTableCell!) -> Bool in
-            let url : String = "http://baymaar.com/xj68123wqdgrego2/addFriend.php";
+            let url : String = "http://192.168.1.121/xj68123wqdgrego2/addFriend.php";
             Alamofire.request(.POST, "\(url)" , parameters:["add_userid" : "\(self.people[indexPath.row].userid)", "userid" : "\(self.credentials.objectForKey("userid")!)"])
             return true
         })]
@@ -103,7 +112,9 @@ class Search : UIViewController, UITableViewDataSource, UITableViewDelegate, UIS
         let blankImage = UIImage(named: "defaultAvatar.png")
         let filter = AspectScaledToFillSizeCircleFilter(size: CGSize(width: 80, height: 80));
         cell._pic.af_setImageWithURL(url!, placeholderImage: blankImage, filter: filter, imageTransition: UIImageView.ImageTransition.CrossDissolve(1))
-        
+        cell.preservesSuperviewLayoutMargins = false
+        cell.separatorInset = UIEdgeInsetsZero
+        cell.layoutMargins = UIEdgeInsetsZero
         return cell
     }
     

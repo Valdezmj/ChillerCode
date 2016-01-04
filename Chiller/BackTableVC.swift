@@ -22,7 +22,6 @@ class BackTableVC: UIViewController {
         performSegueWithIdentifier("load_login", sender: self)
     }
     override func viewDidLoad() {
-        scrollView.contentSize.height = 680
-        
+        //scrollView.contentSize.height = 780
     }
 }
