@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,19 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Chiller Bitch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtU-1O-wtX">
-                                <rect key="frame" x="201" y="245" width="199" height="110"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="qTl-Mo-DyY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="Ufc-Hp-OQh"/>
+                                    <constraint firstAttribute="height" constant="600" id="ghs-EZ-efr"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PtU-1O-wtX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="MdE-5O-Sb9"/>
-                            <constraint firstItem="PtU-1O-wtX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="pJr-te-4Cz"/>
+                            <constraint firstAttribute="trailing" secondItem="qTl-Mo-DyY" secondAttribute="trailing" id="5x5-po-Dkc"/>
+                            <constraint firstItem="qTl-Mo-DyY" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Qdy-qA-h60"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="qTl-Mo-DyY" secondAttribute="bottom" id="SJ8-MA-cK1"/>
+                            <constraint firstItem="qTl-Mo-DyY" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="apQ-ZF-RoN"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,4 +38,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gradient" width="1920" height="1080"/>
+    </resources>
 </document>

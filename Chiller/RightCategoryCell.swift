@@ -1,0 +1,23 @@
+//
+//  RightCategoryCell.swift
+//  Chiller
+//
+//  Created by Michael Valdez on 11/19/15.
+//  Copyright © 2015 MK. All rights reserved.
+//
+
+import UIKit
+
+class RightCategoryCell: MGSwipeTableCell {
+    
+    @IBOutlet weak var postname: UILabel!
+    @IBOutlet weak var postBody: UILabel!
+    @IBOutlet weak var postTitle: UILabel!
+    @IBOutlet weak var avatar: UIImageView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+}
