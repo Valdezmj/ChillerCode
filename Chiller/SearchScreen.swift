@@ -71,7 +71,7 @@ class Search : UIViewController, UITableViewDataSource, UITableViewDelegate, UIS
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         
-        let url : String = "http://192.168.1.121/xj68123wqdgrego2/search.php";
+        let url : String = "http://kickbakapp.com/xj68123wqdgrego2/search.php";
         Alamofire.request(.POST, "\(url)" , parameters:["search" : "\(searchBar.searchBar.text!)", "username" : "\(credentials.objectForKey("username")!)"]).responseJSON() {
             (response) in
             if response.data != nil {
@@ -101,7 +101,7 @@ class Search : UIViewController, UITableViewDataSource, UITableViewDelegate, UIS
         }
         cell.leftButtons = [MGSwipeButton(title: "", icon: UIImage(named:"addUser.png"), backgroundColor: UIColor.greenColor(), callback: {
             (sender: MGSwipeTableCell!) -> Bool in
-            let url : String = "http://192.168.1.121/xj68123wqdgrego2/addFriend.php";
+            let url : String = "http://kickbakapp.com/xj68123wqdgrego2/addFriend.php";
             Alamofire.request(.POST, "\(url)" , parameters:["add_userid" : "\(self.people[indexPath.row].userid)", "userid" : "\(self.credentials.objectForKey("userid")!)"])
             return true
         })]

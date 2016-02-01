@@ -18,8 +18,11 @@ class Post {
     var chill: Bool!
     var burn: Bool!
     var time: String!
+    var comments: String!
+    var pics: String!
+    var videos: String!
     
-    init(name: String!, body: String? = nil, title: String!,  image: String!, chill: Bool!, burn: Bool!, time: String!) {
+    init(name: String!, body: String? = nil, title: String!,  image: String!, chill: Bool!, burn: Bool!, time: String!, comments: String!, pics: String!, videos: String!) {
         self.name = name
         self.title = title
         self.body = body
@@ -27,5 +30,8 @@ class Post {
         self.chill = chill.boolValue
         self.burn = burn.boolValue
         self.time = time
+        self.comments = comments
+        self.pics = pics
+        self.videos = videos
     }
 }

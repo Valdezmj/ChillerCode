@@ -18,7 +18,7 @@ class PostCreationView: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBAction func createPost(sender: AnyObject) {
         indicator.startAnimating()
-        let url : String = "http://192.168.1.121/xj68123wqdgrego2/submitPost.php";
+        let url : String = "http://kickbakapp.com/xj68123wqdgrego2/submitPost.php";
         Alamofire.request(.POST, "\(url)" , parameters:["body" : "\(body.text!)", "userid" : "\(self.credentials.objectForKey("userid")!)", "title" : "\(__title.text!)"]).responseJSON() {
             (response) in
             if response.data != nil {

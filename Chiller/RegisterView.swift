@@ -33,7 +33,7 @@ extension NSDate {
         return NSCalendar.currentCalendar().components(.Second, fromDate: date, toDate: self, options: []).second
     }
 }
-class RegisterView: UIViewController, NSURLSessionDelegate {
+class RegisterView: UIViewController, NSURLSessionDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var birthdateLabel: UILabel!
     @IBOutlet weak var relationship: UIPickerView!
@@ -49,6 +49,13 @@ class RegisterView: UIViewController, NSURLSessionDelegate {
     @IBOutlet weak var username: UITextField!
     var session: NSURLSession!
     var birthdate: String!
+    var genderData: [String] = [String]()
+    var relationData: [String] = [String]()
+    var preferenceData: [String] = [String]()
+    var _gender = String()
+    var _relation = String()
+    var _preference = String()
+    
     
     @IBOutlet weak var alreadyAcctBtn: UIButton!
     @IBOutlet weak var registerTitle: UILabel!
@@ -56,6 +63,16 @@ class RegisterView: UIViewController, NSURLSessionDelegate {
     @IBOutlet weak var registerBackground: UIView!
     @IBOutlet var tap: UITapGestureRecognizer!
     override func viewDidLoad() {
+        genderData = ["Male", "Female", "Transgender"]
+        relationData = ["Single", "In a Relationship", "Married"]
+        preferenceData = ["Straight", "Gay", "Bisexual"]
+        gender.delegate = self
+        gender.dataSource = self
+        relationship.delegate = self
+        relationship.dataSource = self
+        preference.delegate = self
+        preference.dataSource = self
+        
         super.viewDidLoad()
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         configuration.timeoutIntervalForRequest = 15
@@ -165,6 +182,7 @@ class RegisterView: UIViewController, NSURLSessionDelegate {
         password.resignFirstResponder()
         email.resignFirstResponder()
         username.resignFirstResponder()
+        city.resignFirstResponder()
     }
     
     override func didReceiveMemoryWarning() {
@@ -173,9 +191,9 @@ class RegisterView: UIViewController, NSURLSessionDelegate {
     }
     
     @IBAction func createAccount(sender: UIButton!) {
-        let url : String = "http://192.168.1.121/xj68123wqdgrego2/testCreateAccount.php";
+        let url : String = "http://kickbakapp.com/xj68123wqdgrego2/testCreateAccount.php";
         Alamofire.request(.POST, "\(url)" , parameters:["username" : "\((username.text?.lowercaseString)!)", "birth" :
-            "\(birthdate!)", "profile" : "http://192.168.1.121/profile_pic/\((username.text?.lowercaseString)!)/profile.jpeg", "email" : "\(email.text!)", "firstname" : "\(firstName.text!)", "lastname" : "\(lastName.text!)", "password" : "\(password.text)", "active"  : "1"]).responseJSON() {
+            "\(birthdate!)", "profile" : "http://192.168.1.133/profile_pic/\((username.text?.lowercaseString)!)/profile.jpeg", "email" : "\(email.text!)", "firstname" : "\(firstName.text!)", "lastname" : "\(lastName.text!)", "password" : "\(password.text)", "active"  : "1", "gender" : "\(_gender)", "relationship" : "\(_relation)", "preference" : "\(_preference)", "city" : "\(city.text!)"]).responseJSON() {
                 (response) in
                 if response.data != nil {
                     let _r = JSON(data: response.data!)
@@ -201,6 +219,55 @@ class RegisterView: UIViewController, NSURLSessionDelegate {
             }
         }
         
+    }
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    // The number of rows of data
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if (pickerView == self.gender) {
+            return genderData.count
+        }
+        if (pickerView == relationship) {
+            return relationData.count
+        }
+        if (pickerView == preference) {
+            return preferenceData.count
+        }
+        return 1
+    }
+    
+    // The data to return for the row and component (column) that's being passed in
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if (pickerView == self.gender) {
+            _gender = genderData[row]
+            return genderData[row]
+        }
+        if (pickerView == relationship) {
+            _relation = relationData[row]
+            return relationData[row]
+        }
+        if (pickerView == preference) {
+            _preference = preferenceData[row]
+            return preferenceData[row]
+        }
+        return "here"
+    }
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if (pickerView == self.gender) {
+            print("gender change: ")
+            _gender = genderData[row]
+            print("gender change: \(_gender)")
+        }
+        if (pickerView == self.relationship) {
+            _relation = relationData[row]
+            print("relationship change: \(_relation)")
+        }
+        if (pickerView == self.preference) {
+            _preference = preferenceData[row]
+            print("preference change: \(_preference)")
+        }
     }
     
 }

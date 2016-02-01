@@ -147,12 +147,12 @@ class LoginForm: UIViewController {
     @IBAction func checkCredentials(sender: UIButton!) {
         if username.text! != "" && password.text! != "" {
             busyIndicator.startAnimating()
-            let url : String = "http://192.168.1.121/xj68123wqdgrego2/testCheckLoginCredentials.php";
+            let url : String = "http://kickbakapp.com/xj68123wqdgrego2/testCheckLoginCredentials.php";
+            print("\(password.text)")
             Alamofire.request(.POST, "\(url)" , parameters:["username" : "\((username.text?.lowercaseString)!)", "password" : "\(password.text)"]).responseJSON() {
                 (response) in
                 if response.data != nil {
-                    print("Sending to handle request!\n")
-                    self.handleResponse(response.data)
+                    self.handleResponse(response.data!)
                 } else {
                     print("Couldn't get a response to check credentials: \(response.data)")
                 }
@@ -162,7 +162,6 @@ class LoginForm: UIViewController {
 
     func handleResponse(response: NSData!) {
         let _r = JSON(data: response)
-        print ("here: \(_r)")
         if _r["result"] == "1" {
             busyIndicator.stopAnimating()
             errorText.hidden = true

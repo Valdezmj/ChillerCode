@@ -23,8 +23,8 @@ class LeftCategory : UIViewController, UITableViewDataSource, UITableViewDelegat
     
     func loadPosters() {
         let photo1 = UIImage(named: "tracks")
-        let personOne = Post(name: "Location Name", body: "Free pancakes only today!", title: "Offering free pancakes", image: "tracks", chill: false, burn: false, time: "0 minutes ago")
-        let personTwo = Post(name: "Location Name", body: "Free pancakes only today!", title: "Offering free pancakes", image: "tracks", chill: false, burn: false, time: "0 minutes ago")
+        let personOne = Post(name: "Location Name", body: "Free pancakes only today!", title: "Offering free pancakes", image: "tracks", chill: false, burn: false, time: "0 minutes ago", comments: "100 comments", pics: "100+ pics", videos: "100+ videos")
+        let personTwo = Post(name: "Location Name", body: "Free pancakes only today!", title: "Offering free pancakes", image: "tracks", chill: false, burn: false, time: "0 minutes ago", comments: "100 comments", pics: "100+ pics", videos: "100+ videos")
         
         posts += [personOne, personTwo]
         
@@ -53,7 +53,7 @@ class LeftCategory : UIViewController, UITableViewDataSource, UITableViewDelegat
         cell.postBody.text = _post.body
         cell.postTitle.text = _post.title
         //cell.avatar.image = _post.img
-        let url = NSURL(string: "http://192.168.1.121/profile_pic/beta/profile.png")!
+        let url = NSURL(string: "http://kickbakapp.com/profile_pic/beta/profile.png")!
         let blankImage = UIImage()
         let filter = RoundedCornersFilter(radius: 15.0)
         cell.avatar.af_setImageWithURL(url, placeholderImage: blankImage, filter: filter, imageTransition: UIImageView.ImageTransition.CrossDissolve(1))
