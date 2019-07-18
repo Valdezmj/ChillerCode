@@ -1,3 +1,4 @@
+#TODO make 'id' the foreign keys
 CREATE TABLE `Users` (
   `username` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
